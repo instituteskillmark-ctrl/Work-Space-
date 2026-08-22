@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
 
 const Projects = ({ standalone = true }) => {
@@ -53,6 +54,16 @@ const Projects = ({ standalone = true }) => {
           </a>
         </div>
       ))}
+      <br />
+      <div style={{ marginTop: '15px' }}>
+        <Link 
+          to="/services" 
+          className="primary-action"
+          id="next-section-btn"
+        >
+          Next: Services →
+        </Link>
+      </div>
     </section>
   );
 

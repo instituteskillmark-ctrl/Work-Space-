@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
 
 const Contact = ({ standalone = true }) => {
@@ -15,9 +16,14 @@ const Contact = ({ standalone = true }) => {
       <p><strong>Professional Title:</strong> AI Creative Developer</p>
       <p><strong>Email:</strong> <a href="mailto:novaagency79@gmail.com">novaagency79@gmail.com</a></p>
       <br />
-      <a href="mailto:novaagency79@gmail.com" className="action-link" id="email-action">
-        Send Email (mailto:novaagency79@gmail.com)
-      </a>
+      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+        <a href="mailto:novaagency79@gmail.com" className="action-link" id="email-action">
+          Send Email (mailto:novaagency79@gmail.com)
+        </a>
+        <Link to="/all" className="primary-action" id="next-section-btn">
+          Next: Main Workspace (All) →
+        </Link>
+      </div>
     </section>
   );
 

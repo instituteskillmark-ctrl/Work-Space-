@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
 
 const Capabilities = ({ standalone = true }) => {
@@ -28,6 +29,16 @@ const Capabilities = ({ standalone = true }) => {
           </li>
         ))}
       </ol>
+      <br />
+      <div style={{ marginTop: '15px' }}>
+        <Link 
+          to="/ai-lab" 
+          className="primary-action"
+          id="next-section-btn"
+        >
+          Next: AI Lab →
+        </Link>
+      </div>
     </section>
   );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
 
 const AILab = ({ standalone = true }) => {
@@ -32,6 +33,16 @@ const AILab = ({ standalone = true }) => {
           <p><em>{state.note}</em></p>
         </div>
       ))}
+      <br />
+      <div style={{ marginTop: '15px' }}>
+        <Link 
+          to="/contact" 
+          className="primary-action"
+          id="next-section-btn"
+        >
+          Next: Contact →
+        </Link>
+      </div>
     </section>
   );
 
