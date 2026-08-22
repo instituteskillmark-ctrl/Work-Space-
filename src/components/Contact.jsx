@@ -25,7 +25,7 @@ const Contact = ({ standalone = true }) => {
       {standalone && (
         <PageMeta 
           title="Contact & Start a Project — Hassan Ahmad"
-          description="Contact Hassan Ahmad, AI Creative Developer, via email at hassanahmad.dev@gmail.com."
+          description="Contact Hassan Ahmad, AI Creative Developer, via email at novaagency79@gmail.com."
         />
       )}
       <div className="main-wrapper">
@@ -132,26 +132,9 @@ const Contact = ({ standalone = true }) => {
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '4px' }}>
                 PRIMARY EMAIL
               </div>
-              <a href="mailto:hassanahmad.dev@gmail.com" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600 }}>
-                hassanahmad.dev@gmail.com
+              <a href="mailto:novaagency79@gmail.com" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600 }}>
+                novaagency79@gmail.com
               </a>
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                Alt: novaagency79@gmail.com
-              </div>
-            </div>
-
-            <div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '4px' }}>
-                PHONE & WHATSAPP
-              </div>
-              <div style={{ color: '#FFF', fontWeight: 600, fontSize: '1.05rem' }}>+92 300 1234567</div>
-            </div>
-
-            <div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '4px' }}>
-                LOCATION
-              </div>
-              <div style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>Gujranwala, Pakistan</div>
             </div>
 
             <div>

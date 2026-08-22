@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import Welcome from './components/Welcome';
 import Entry from './components/Entry';
@@ -13,6 +13,7 @@ import WorkspaceOverview from './components/WorkspaceOverview';
 import NotFound from './components/NotFound';
 import SidebarNav from './components/SidebarNav';
 import CustomCursor from './components/CustomCursor';
+import Preloader from './components/Preloader';
 import './App.css';
 
 // Component layout wrapper for workspace destination routes
@@ -73,9 +74,12 @@ function AppRoutes() {
 }
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <BrowserRouter>
       <div className="app-layout">
+        {loading && <Preloader onComplete={() => setLoading(false)} />}
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

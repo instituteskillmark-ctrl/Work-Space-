@@ -48,7 +48,7 @@ const SidebarNav = () => {
         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="LinkedIn">in</a>
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="GitHub">gh</a>
         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon-link" aria-label="Instagram">ig</a>
-        <a href="mailto:hassanahmad.dev@gmail.com" className="social-icon-link" aria-label="Email">✉</a>
+        <a href="mailto:novaagency79@gmail.com" className="social-icon-link" aria-label="Email">✉</a>
       </aside>
     </>
   );

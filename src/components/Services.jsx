@@ -7,32 +7,26 @@ const Services = ({ standalone = true }) => {
     {
       id: 'service-01',
       num: '01',
-      name: 'AI SOLUTIONS',
-      description: 'Custom AI tools, API integrations, LLM workflows, and intelligent web applications built to scale.'
+      name: 'AI-Powered Website Development',
+      description: 'Modern, responsive, and professional websites for businesses and brands.'
     },
     {
       id: 'service-02',
       num: '02',
-      name: 'WEB DEVELOPMENT',
-      description: 'Modern, fast, responsive, and pixel-perfect web applications built with modern frontend frameworks.'
+      name: 'UI/UX & Website Redesign',
+      description: 'Improving outdated websites with clean, modern, and user-friendly designs.'
     },
     {
       id: 'service-03',
       num: '03',
-      name: 'AI CHATBOTS',
-      description: 'Smart website chatbots with custom voice, automated customer support, and lead engagement.'
+      name: 'AI Chatbot Solutions',
+      description: 'Custom website chatbots for customer support and user engagement.'
     },
     {
       id: 'service-04',
       num: '04',
-      name: 'AUTOMATION',
-      description: 'Custom workflow automations using n8n, Make, and Zapier to optimize business operations.'
-    },
-    {
-      id: 'service-05',
-      num: '05',
-      name: 'CREATIVE DESIGN',
-      description: 'UI/UX design direction, 3D interactive web graphics, micro-animations, and digital branding.'
+      name: 'AI Tools & MVP Development',
+      description: 'Turning ideas into functional AI-powered tools and MVPs.'
     }
   ];
 
@@ -40,8 +34,8 @@ const Services = ({ standalone = true }) => {
     <section className="section-wrapper" id="services-section">
       {standalone && (
         <PageMeta 
-          title="Services — Hassan Ahmad"
-          description="Services offered by Hassan Ahmad including AI Solutions, Web Development, AI Chatbots, Automation, and Creative Design."
+          title="Services — Hassan Ahmad | AI Creative Developer"
+          description="Services offered by Hassan Ahmad including AI-Powered Website Development, UI/UX Redesign, AI Chatbots, and MVP Development."
         />
       )}
       <div className="main-wrapper">
@@ -50,7 +44,7 @@ const Services = ({ standalone = true }) => {
           WHAT I CAN <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.25)' }}>BUILD FOR YOU</span>
         </h2>
 
-        {/* Interactive Capability Modules Grid */}
+        {/* User-Approved 4 Service Cards Grid */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '24px', marginBottom: '48px' }}>
           {servicesData.map((service) => (
             <div 

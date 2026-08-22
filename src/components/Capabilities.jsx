@@ -4,13 +4,13 @@ import PageMeta from './PageMeta';
 import SkillsGraph from './SkillsGraph';
 
 const Capabilities = ({ standalone = true }) => {
-  const capabilitiesList = [
+  const userApprovedSkills = [
     'AI-Powered Website & Digital Solutions Creator',
-    'AI Prompt Engineering & LLM Architecture',
+    'AI Prompt Engineering',
     'AI-Assisted UI/UX & Design Direction',
     'AI Tool / SaaS Prototype Building',
-    'AI Chatbot & Autonomous Agent Development',
-    'AI-Assisted Deployment, Cloud & Debugging',
+    'AI Chatbot Development',
+    'AI-Assisted Deployment & Debugging',
     'AI Image Generation & Creative Direction'
   ];
 
@@ -31,13 +31,13 @@ const Capabilities = ({ standalone = true }) => {
         {/* Interactive Constellation Graph */}
         <SkillsGraph />
 
-        {/* Core Technical Capability List */}
+        {/* User-Approved 7 Skills List */}
         <div style={{ marginTop: '40px' }}>
           <h3 style={{ fontSize: '1.25rem', marginBottom: '20px', color: 'var(--text-secondary)' }}>
             Core Technical Capabilities
           </h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px', marginBottom: '40px' }}>
-            {capabilitiesList.map((item, index) => (
+            {userApprovedSkills.map((item, index) => (
               <div 
                 key={index} 
                 className="glossy-card" 
