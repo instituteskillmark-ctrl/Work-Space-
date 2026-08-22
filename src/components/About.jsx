@@ -20,14 +20,15 @@ const About = ({ standalone = true }) => {
         I’m Hassan Ahmad, an aspiring AI Creative Developer focused on building modern, visually engaging, and innovative digital experiences. I combine creativity, web development, and AI-powered tools to turn ideas into interactive and impactful digital products.
       </p>
       <br />
-      <Link 
-        to="/all" 
-        className="primary-action"
-        style={{ display: 'inline-block', textDecoration: 'none', textAlign: 'center' }}
-        id="view-full-workspace-btn"
-      >
-        View Full Workspace
-      </Link>
+      <p>
+        <Link 
+          to="/all" 
+          className="primary-action"
+          id="view-full-workspace-btn"
+        >
+          View Full Workspace
+        </Link>
+      </p>
     </section>
   );
 
