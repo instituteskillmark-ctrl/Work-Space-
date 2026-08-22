@@ -14,13 +14,9 @@ const Navigation = () => {
 
   return (
     <nav id="main-navigation" aria-label="Main Navigation">
-      <p><strong>Workspace Navigation:</strong></p>
-      <ul>
+      <ul className="nav-grid">
         <li>
-          <Link 
-            to="/entry"
-            id="nav-return-entry"
-          >
+          <Link to="/entry" className="nav-link-btn" id="nav-return-entry">
             ← Return to Entry
           </Link>
         </li>
@@ -28,7 +24,7 @@ const Navigation = () => {
           <li key={dest.id}>
             <NavLink
               to={dest.path}
-              className={({ isActive }) => (isActive ? 'active' : '')}
+              className={({ isActive }) => (isActive ? 'nav-link-btn active' : 'nav-link-btn')}
               id={`nav-${dest.id}`}
             >
               {dest.label}

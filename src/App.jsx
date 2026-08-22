@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import Welcome from './components/Welcome';
 import Entry from './components/Entry';
 import Navigation from './components/Navigation';
@@ -11,30 +11,48 @@ import AILab from './components/AILab';
 import Contact from './components/Contact';
 import WorkspaceOverview from './components/WorkspaceOverview';
 import NotFound from './components/NotFound';
+import SidebarNav from './components/SidebarNav';
+import CustomCursor from './components/CustomCursor';
 import './App.css';
 
 // Component layout wrapper for workspace destination routes
 const WorkspaceLayout = ({ children }) => {
   return (
     <>
-      <header>
-        <div className="site-brand" style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '10px' }}>
-          Hassan Ahmad — AI Creative Developer Workspace
-        </div>
+      <CustomCursor />
+      <header className="top-header">
+        <Link to="/" className="brand-mark" data-cursor-text="HOME">
+          <div className="brand-icon">HA</div>
+          <div className="brand-text">
+            <span className="brand-name">HASSAN AHMAD</span>
+            <span className="brand-sub">AI CREATIVE DEVELOPER</span>
+          </div>
+        </Link>
+
         <Navigation />
+
+        <div className="top-right-actions">
+          <div className="status-badge">
+            <span className="status-dot"></span>
+            <span>AVAILABLE FOR NEW PROJECTS</span>
+          </div>
+          <Link to="/contact" className="btn-primary" style={{ padding: '8px 16px', minHeight: '38px', fontSize: '0.8rem' }} data-cursor-text="TALK">
+            LET'S TALK
+          </Link>
+        </div>
       </header>
+
+      <SidebarNav />
       {children}
     </>
   );
 };
 
 function AppRoutes() {
-  const location = useLocation();
-
   return (
     <Routes>
-      <Route path="/" element={<Welcome />} />
-      <Route path="/entry" element={<Entry />} />
+      <Route path="/" element={<WorkspaceLayout><Welcome /></WorkspaceLayout>} />
+      <Route path="/entry" element={<WorkspaceLayout><Entry /></WorkspaceLayout>} />
 
       {/* Workspace routes with shared header/nav layout */}
       <Route path="/about" element={<WorkspaceLayout><About standalone={true} /></WorkspaceLayout>} />
@@ -57,15 +75,15 @@ function AppRoutes() {
 function App() {
   return (
     <BrowserRouter>
-      <div className="app-container">
-        {/* Requirement 8: Visually hidden skip link for accessibility */}
+      <div className="app-layout">
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
         <AppRoutes />
-        {/* Requirement 1: Footer landmark */}
-        <footer style={{ marginTop: '20px', padding: '10px 0', borderTop: '1px solid #eee', fontSize: '13px' }}>
-          <p>Hassan Ahmad — AI Creative Developer Workspace</p>
+        <footer style={{ marginTop: 'auto', padding: '24px 40px', borderTop: '1px solid var(--border-glass)', fontSize: '13px', color: 'var(--text-muted)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
+          <p>© 2025 Hassan Ahmad. All Rights Reserved.</p>
+          <p>Built with Passion ♥</p>
+          <a href="#top" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Back to Top ↑</a>
         </footer>
       </div>
     </BrowserRouter>

@@ -1,43 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
+import SkillsGraph from './SkillsGraph';
 
 const Capabilities = ({ standalone = true }) => {
   const capabilitiesList = [
     'AI-Powered Website & Digital Solutions Creator',
-    'AI Prompt Engineering',
+    'AI Prompt Engineering & LLM Architecture',
     'AI-Assisted UI/UX & Design Direction',
     'AI Tool / SaaS Prototype Building',
-    'AI Chatbot Development',
-    'AI-Assisted Deployment & Debugging',
+    'AI Chatbot & Autonomous Agent Development',
+    'AI-Assisted Deployment, Cloud & Debugging',
     'AI Image Generation & Creative Direction'
   ];
 
   const content = (
-    <section className="section-block" id="capabilities-section">
+    <section className="section-wrapper" id="capabilities-section">
       {standalone && (
         <PageMeta 
-          title="Capabilities — Hassan Ahmad"
+          title="Capabilities & Skills — Hassan Ahmad"
           description="Technical capabilities and skills of Hassan Ahmad in AI development, prompt engineering, and UI/UX."
         />
       )}
-      {standalone ? <h1>Capabilities</h1> : <h2>Capabilities</h2>}
-      <ol className="plain-list">
-        {capabilitiesList.map((item, index) => (
-          <li key={index}>
-            <strong>{item}</strong>
-          </li>
-        ))}
-      </ol>
-      <br />
-      <div style={{ marginTop: '15px' }}>
-        <Link 
-          to="/ai-lab" 
-          className="primary-action"
-          id="next-section-btn"
-        >
-          Next: AI Lab →
-        </Link>
+      <div className="main-wrapper">
+        <span className="eyebrow">03 SKILLS // TECHNOLOGIES</span>
+        <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '16px' }}>
+          THE TECHNOLOGIES <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.25)' }}>I WORK WITH</span>
+        </h2>
+
+        {/* Interactive Constellation Graph */}
+        <SkillsGraph />
+
+        {/* Core Technical Capability List */}
+        <div style={{ marginTop: '40px' }}>
+          <h3 style={{ fontSize: '1.25rem', marginBottom: '20px', color: 'var(--text-secondary)' }}>
+            Core Technical Capabilities
+          </h3>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px', marginBottom: '40px' }}>
+            {capabilitiesList.map((item, index) => (
+              <div 
+                key={index} 
+                className="glossy-card" 
+                style={{ padding: '18px 22px', display: 'flex', alignItems: 'center', gap: '14px', background: 'rgba(13, 15, 20, 0.75)' }}
+                data-cursor-text="SKILL"
+              >
+                <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.85rem' }}>
+                  0{index + 1}.
+                </span>
+                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+          <Link to="/services" className="btn-primary" id="next-section-btn" data-cursor-text="SERVICES">
+            Next: Services →
+          </Link>
+        </div>
       </div>
     </section>
   );
