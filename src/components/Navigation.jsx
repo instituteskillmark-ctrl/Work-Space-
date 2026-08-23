@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
   const destinations = [
@@ -8,18 +8,12 @@ const Navigation = () => {
     { id: 'services', path: '/services', label: 'Services' },
     { id: 'capabilities', path: '/capabilities', label: 'Capabilities' },
     { id: 'ai-lab', path: '/ai-lab', label: 'AI Lab' },
-    { id: 'contact', path: '/contact', label: 'Contact' },
-    { id: 'all', path: '/all', label: 'Main Workspace (All)' }
+    { id: 'contact', path: '/contact', label: 'Contact' }
   ];
 
   return (
     <nav id="main-navigation" aria-label="Main Navigation">
       <ul className="nav-grid">
-        <li>
-          <Link to="/entry" className="nav-link-btn" id="nav-return-entry">
-            ← Return to Entry
-          </Link>
-        </li>
         {destinations.map((dest) => (
           <li key={dest.id}>
             <NavLink
@@ -37,3 +31,4 @@ const Navigation = () => {
 };
 
 export default Navigation;
+

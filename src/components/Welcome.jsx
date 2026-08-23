@@ -55,7 +55,7 @@ const Welcome = () => {
             I BUILD DIGITAL EXPERIENCES THAT FEEL <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.45)' }}>ALIVE.</span>
           </h1>
           <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '36px', maxWidth: '480px', lineHeight: 1.6 }}>
-            I combine AI, Design & Code to create immersive digital experiences for the future.
+            I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.
           </p>
 
           {/* Functional Action Buttons: Primary & Secondary */}

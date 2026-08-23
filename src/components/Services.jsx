@@ -51,12 +51,13 @@ const Services = ({ standalone = true }) => {
         />
       )}
       <div className="main-wrapper">
+        <div className="section-divider-diagonal" style={{ marginTop: '0', marginBottom: '40px' }} />
         <span className="eyebrow">05 SERVICES // CAPABILITIES</span>
         <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '40px' }}>
           INTERACTIVE STUDIO <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.3)' }}>SERVICE SELECTOR</span>
         </h2>
 
-        {/* Interactive Studio Selector Composition */}
+        {/* Interactive Studio Selector Composition with Asymmetric Panel Styling */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '36px', marginBottom: '48px', alignItems: 'stretch' }}>
           {/* Vertical Interactive Service Index */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -71,12 +72,16 @@ const Services = ({ standalone = true }) => {
                   style={{
                     padding: '22px 26px',
                     cursor: 'pointer',
+                    borderRadius: '12px',
+                    borderLeft: isSelected ? '4px solid var(--accent-gold)' : '1px solid var(--border-specular)',
                     borderColor: isSelected ? 'var(--accent-gold)' : 'var(--border-specular)',
-                    background: isSelected ? 'rgba(229, 152, 59, 0.14)' : 'rgba(11, 13, 18, 0.85)',
+                    background: isSelected ? 'linear-gradient(135deg, rgba(229, 152, 59, 0.16) 0%, rgba(11, 13, 18, 0.9) 100%)' : 'rgba(11, 13, 18, 0.75)',
                     boxShadow: isSelected ? '0 0 30px rgba(229, 152, 59, 0.25)' : 'none',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-between',
+                    transform: isSelected ? 'translateX(6px)' : 'none',
+                    transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                   }}
                   data-cursor-text="SELECT"
                 >
@@ -88,14 +93,14 @@ const Services = ({ standalone = true }) => {
                       {service.name}
                     </span>
                   </div>
-                  <span style={{ color: isSelected ? 'var(--accent-gold)' : 'var(--text-muted)', fontWeight: 'bold' }}>→</span>
+                  <span style={{ color: isSelected ? 'var(--accent-gold)' : 'var(--text-muted)', fontWeight: 'bold', transform: isSelected ? 'translateX(4px)' : 'none', transition: 'transform 0.3s ease' }}>→</span>
                 </div>
               );
             })}
           </div>
 
           {/* Large Dynamic Active Service Feature Showcase Panel */}
-          <div className="glossy-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.9)' }}>
+          <div className="glossy-card asymmetric-hero-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.92)' }}>
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                 <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--accent-gold)', letterSpacing: '0.12em' }}>

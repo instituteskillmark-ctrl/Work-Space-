@@ -37,79 +37,52 @@ const Contact = ({ standalone = true }) => {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', marginBottom: '48px' }}>
           {/* Contact Form */}
-          <form className="glossy-card" onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-            <h3 style={{ fontSize: '1.35rem', color: '#FFF' }}>Start a Project</h3>
+          <form className="glossy-card" onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '22px', padding: '36px' }}>
+            <h3 style={{ fontSize: '1.35rem', color: '#FFF', letterSpacing: '0.02em' }}>Start a Project</h3>
             
             <div>
-              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
+              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', display: 'block', marginBottom: '8px', letterSpacing: '0.12em' }}>
                 YOUR NAME
               </label>
               <input 
                 type="text" 
                 name="name"
+                className="form-input"
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Enter your name" 
                 required
-                style={{
-                  width: '100%',
-                  padding: '14px 18px',
-                  borderRadius: '6px',
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid var(--border-specular)',
-                  color: 'var(--text-primary)',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.95rem'
-                }}
               />
             </div>
 
             <div>
-              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
+              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', display: 'block', marginBottom: '8px', letterSpacing: '0.12em' }}>
                 YOUR EMAIL
               </label>
               <input 
                 type="email" 
                 name="email"
+                className="form-input"
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="name@example.com" 
                 required
-                style={{
-                  width: '100%',
-                  padding: '14px 18px',
-                  borderRadius: '6px',
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid var(--border-specular)',
-                  color: 'var(--text-primary)',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.95rem'
-                }}
               />
             </div>
 
             <div>
-              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--text-muted)', display: 'block', marginBottom: '6px' }}>
+              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', display: 'block', marginBottom: '8px', letterSpacing: '0.12em' }}>
                 PROJECT DETAILS
               </label>
               <textarea 
                 name="message"
+                className="form-input"
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Tell me about your project goals and scope..." 
                 rows="4"
                 required
-                style={{
-                  width: '100%',
-                  padding: '14px 18px',
-                  borderRadius: '6px',
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid var(--border-specular)',
-                  color: 'var(--text-primary)',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.95rem',
-                  resize: 'vertical'
-                }}
+                style={{ resize: 'vertical' }}
               ></textarea>
             </div>
 
