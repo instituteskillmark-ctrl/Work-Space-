@@ -90,14 +90,18 @@ const Projects = ({ standalone = true }) => {
                 <div>
                   {/* Visual Case-Study Preview Frame with Real Image Mockup */}
                   <div style={{
-                    height: isFeatured ? '250px' : '210px',
+                    height: isFeatured ? '260px' : '210px',
                     width: '100%',
                     borderRadius: '10px',
                     border: '1px solid var(--border-gold)',
                     position: 'relative',
                     overflow: 'hidden',
                     marginBottom: '24px',
-                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
+                    background: 'rgba(11, 13, 18, 0.95)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 12px 32px rgba(0, 0, 0, 0.65)'
                   }}>
                     <img 
                       src={project.img} 
@@ -105,10 +109,10 @@ const Projects = ({ standalone = true }) => {
                       style={{
                         width: '100%',
                         height: '100%',
-                        objectFit: 'cover',
-                        objectPosition: 'top center',
+                        objectFit: 'contain',
+                        objectPosition: 'center',
                         display: 'block',
-                        filter: 'brightness(0.92) contrast(1.05)'
+                        filter: 'brightness(0.95) contrast(1.08)'
                       }}
                     />
 

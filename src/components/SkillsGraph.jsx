@@ -84,34 +84,68 @@ const SkillsGraph = () => {
           })}
         </svg>
 
-        {/* Central HASSAN AI CORE Node */}
+        {/* Central 3D Illuminated AI Core Sphere & Gyroscope */}
         <div
           style={{
             position: 'absolute',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
-            width: '136px',
-            height: '136px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(229, 152, 59, 0.4) 0%, rgba(11, 13, 18, 0.95) 75%)',
-            border: '2px solid var(--accent-gold)',
-            boxShadow: '0 0 50px rgba(229, 152, 59, 0.5), inset 0 0 25px rgba(229, 152, 59, 0.25)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flexDirection: 'column',
+            width: '160px',
+            height: '160px',
+            perspective: '800px',
             zIndex: 10,
             cursor: 'pointer'
           }}
-          data-cursor-text="CORE"
+          data-cursor-text="3D CORE"
         >
-          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '1.15rem', color: '#FFF', letterSpacing: '0.12em' }}>
-            HASSAN
-          </span>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.58rem', color: 'var(--accent-gold)', letterSpacing: '0.15em', marginTop: '2px' }}>
-            AI CORE
-          </span>
+          {/* Outer 3D Gyroscope Ring 1 */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: '-12px',
+              borderRadius: '50%',
+              border: '2px solid rgba(229, 152, 59, 0.65)',
+              borderTopColor: 'transparent',
+              boxShadow: '0 0 30px rgba(229, 152, 59, 0.5)'
+            }}
+          />
+
+          {/* Outer 3D Gyroscope Ring 2 */}
+          <div
+            style={{
+              position: 'absolute',
+              inset: '-22px',
+              borderRadius: '50%',
+              border: '1.5px dashed rgba(245, 158, 11, 0.45)',
+              boxShadow: '0 0 40px rgba(229, 152, 59, 0.3)',
+              transform: 'rotateX(65deg) rotateY(25deg)'
+            }}
+          />
+
+          {/* Volumetric Glowing 3D Sphere Core */}
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '50%',
+              background: 'radial-gradient(circle at 35% 35%, #F59E0B 0%, rgba(229, 152, 59, 0.75) 45%, rgba(11, 13, 18, 0.95) 85%)',
+              border: '2px solid var(--accent-gold)',
+              boxShadow: '0 0 65px rgba(229, 152, 59, 0.65), inset -12px -12px 35px rgba(0,0,0,0.85), inset 12px 12px 35px rgba(245, 158, 11, 0.65)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              flexDirection: 'column',
+              position: 'relative'
+            }}
+          >
+            <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '1.2rem', color: '#FFF', letterSpacing: '0.14em', textShadow: '0 0 15px rgba(0,0,0,0.85)' }}>
+              HASSAN
+            </span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--accent-gold)', letterSpacing: '0.18em', marginTop: '2px', fontWeight: 'bold' }}>
+              3D AI CORE
+            </span>
+          </div>
         </div>
 
         {/* Spatial Orbiting Domain Nodes */}
