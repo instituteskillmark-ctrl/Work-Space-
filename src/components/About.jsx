@@ -85,7 +85,7 @@ const About = ({ standalone = true }) => {
             </div>
 
             {/* Profile Label */}
-            <div style={{ paddingTop: '10px', borderTop: '1px solid var(--border-specular)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div style={{ paddingTop: '10px', borderTop: '1px solid var(--border-specular)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
               <div>
                 <h3 style={{ fontSize: '1.1rem', color: '#FFF', letterSpacing: '0.02em', marginBottom: '2px' }}>Hassan Ahmad</h3>
                 <p style={{ color: 'var(--accent-gold)', fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.08em' }}>
@@ -94,6 +94,27 @@ const About = ({ standalone = true }) => {
               </div>
               <div className="status-badge" style={{ margin: 0, padding: '4px 10px', fontSize: '0.62rem' }}>
                 <span>GUJRANWALA</span>
+              </div>
+            </div>
+
+            {/* AI Specialization & Chatbot Focus Block */}
+            <div style={{ padding: '14px 16px', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--border-specular)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '6px' }}>
+                SPECIALIZATION // CHATBOTS & AI TOOLS
+              </div>
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: '1.5', marginBottom: '10px' }}>
+                Specialized in developing custom AI chatbots, autonomous conversational agents, and intelligent web tools tailored for business growth.
+              </p>
+              <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(229, 152, 59, 0.14)', border: '1px solid var(--border-gold)', color: 'var(--accent-gold)' }}>
+                  AI Chatbots
+                </span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-specular)', color: 'var(--text-muted)' }}>
+                  LLM Workflows
+                </span>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-specular)', color: 'var(--text-muted)' }}>
+                  AI Tools & MVPs
+                </span>
               </div>
             </div>
           </div>
