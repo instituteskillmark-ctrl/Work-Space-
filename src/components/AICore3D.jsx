@@ -32,31 +32,26 @@ const AICore3D = () => {
     };
     window.addEventListener('mousemove', handleMouseMove);
 
-    // 3D Polyhedron Vertices (Faceted Crystal Core)
+    // 3D Polyhedron Vertices (Custom Computational Faceted Crystal Core)
     const rawVertices = [
-      // Top apex
-      [0, -1.8, 0],
-      // Upper ring
-      [1.1, -0.6, 1.1],
-      [-1.1, -0.6, 1.1],
-      [-1.1, -0.6, -1.1],
-      [1.1, -0.6, -1.1],
-      // Middle equator
-      [1.6, 0, 0],
-      [0, 0, 1.6],
-      [-1.6, 0, 0],
-      [0, 0, -1.6],
-      // Lower ring
-      [1.1, 0.6, 1.1],
-      [-1.1, 0.6, 1.1],
-      [-1.1, 0.6, -1.1],
-      [1.1, 0.6, -1.1],
-      // Bottom apex
-      [0, 1.8, 0]
+      [0, -2.1, 0],
+      [1.25, -0.75, 1.25],
+      [-1.25, -0.75, 1.25],
+      [-1.25, -0.75, -1.25],
+      [1.25, -0.75, -1.25],
+      [1.85, 0, 0],
+      [0, 0, 1.85],
+      [-1.85, 0, 0],
+      [0, 0, -1.85],
+      [1.25, 0.75, 1.25],
+      [-1.25, 0.75, 1.25],
+      [-1.25, 0.75, -1.25],
+      [1.25, 0.75, -1.25],
+      [0, 2.1, 0]
     ];
 
-    // Inner wireframe lattice
-    const innerVertices = rawVertices.map(v => [v[0] * 0.5, v[1] * 0.5, v[2] * 0.5]);
+    // Inner Counter-Rotating Golden Lattice
+    const innerVertices = rawVertices.map(v => [v[0] * 0.52, v[1] * 0.52, v[2] * 0.52]);
 
     // Edges
     const edges = [
@@ -66,13 +61,13 @@ const AICore3D = () => {
       [13, 9], [13, 10], [13, 11], [13, 12]
     ];
 
-    // Floating particles
-    const particles = Array.from({ length: 45 }, () => ({
-      x: (Math.random() - 0.5) * 4,
-      y: (Math.random() - 0.5) * 4,
-      z: (Math.random() - 0.5) * 4,
-      size: Math.random() * 2.5 + 1,
-      speed: Math.random() * 0.01 + 0.005
+    // Floating Diamond Particles
+    const particles = Array.from({ length: 50 }, () => ({
+      x: (Math.random() - 0.5) * 4.5,
+      y: (Math.random() - 0.5) * 4.5,
+      z: (Math.random() - 0.5) * 4.5,
+      size: Math.random() * 2.8 + 0.8,
+      speed: Math.random() * 0.008 + 0.003
     }));
 
     let angleX = 0;
@@ -81,38 +76,37 @@ const AICore3D = () => {
     const render = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Smooth mouse interpolation
-      mouseX += (targetMouseX - mouseX) * 0.05;
-      mouseY += (targetMouseY - mouseY) * 0.05;
+      // Smooth mouse parallax interpolation
+      mouseX += (targetMouseX - mouseX) * 0.04;
+      mouseY += (targetMouseY - mouseY) * 0.04;
 
-      angleY += 0.008;
-      angleX = Math.sin(angleY * 0.5) * 0.2 + mouseY * 0.3;
+      angleY += 0.006;
+      angleX = Math.sin(angleY * 0.4) * 0.25 + mouseY * 0.35;
 
-      const rotY = angleY + mouseX * 0.4;
+      const rotY = angleY + mouseX * 0.45;
       const rotX = angleX;
+      const innerRotY = -angleY * 1.5;
 
       const scale = Math.min(width, height) * 0.22;
       const cx = width / 2;
       const cy = height / 2;
 
-      // Draw background ambient amber glow
-      const radialGlow = ctx.createRadialGradient(cx, cy, 10, cx, cy, scale * 1.8);
-      radialGlow.addColorStop(0, 'rgba(229, 152, 59, 0.22)');
-      radialGlow.addColorStop(0.5, 'rgba(229, 152, 59, 0.05)');
+      // Draw Volumetric Amber Radial Glow
+      const radialGlow = ctx.createRadialGradient(cx, cy, 10, cx, cy, scale * 2.0);
+      radialGlow.addColorStop(0, 'rgba(229, 152, 59, 0.28)');
+      radialGlow.addColorStop(0.4, 'rgba(229, 152, 59, 0.08)');
       radialGlow.addColorStop(1, 'rgba(7, 8, 10, 0)');
       ctx.fillStyle = radialGlow;
       ctx.fillRect(0, 0, width, height);
 
-      // Helper 3D Projection
-      const project = ([x, y, z]) => {
-        // Rotate around Y
-        let x1 = x * Math.cos(rotY) + z * Math.sin(rotY);
-        let z1 = -x * Math.sin(rotY) + z * Math.cos(rotY);
+      // 3D Projection Helper
+      const project = ([x, y, z], ry = rotY, rx = rotX) => {
+        let x1 = x * Math.cos(ry) + z * Math.sin(ry);
+        let z1 = -x * Math.sin(ry) + z * Math.cos(ry);
         let y1 = y;
 
-        // Rotate around X
-        let y2 = y1 * Math.cos(rotX) - z1 * Math.sin(rotX);
-        let z2 = y1 * Math.sin(rotX) + z1 * Math.cos(rotX);
+        let y2 = y1 * Math.cos(rx) - z1 * Math.sin(rx);
+        let z2 = y1 * Math.sin(rx) + z1 * Math.cos(rx);
 
         const fov = 5;
         const perspective = fov / (fov + z2);
@@ -123,28 +117,28 @@ const AICore3D = () => {
         };
       };
 
-      // Render inner golden core lattice
-      ctx.strokeStyle = 'rgba(245, 158, 11, 0.7)';
-      ctx.lineWidth = 1.2;
+      // 1. Render Inner Counter-Rotating Golden Core Lattice
+      ctx.strokeStyle = 'rgba(245, 158, 11, 0.85)';
+      ctx.lineWidth = 1.4;
       edges.forEach(([i, j]) => {
-        const p1 = project(innerVertices[i]);
-        const p2 = project(innerVertices[j]);
+        const p1 = project(innerVertices[i], innerRotY, -rotX * 0.8);
+        const p2 = project(innerVertices[j], innerRotY, -rotX * 0.8);
         ctx.beginPath();
         ctx.moveTo(p1.px, p1.py);
         ctx.lineTo(p2.px, p2.py);
         ctx.stroke();
       });
 
-      // Render outer faceted dark crystal edges
+      // 2. Render Outer Translucent Crystal Faceted Edges with Specular Highlight
       edges.forEach(([i, j]) => {
         const p1 = project(rawVertices[i]);
         const p2 = project(rawVertices[j]);
 
         const avgZ = (p1.pz + p2.pz) / 2;
-        const alpha = Math.max(0.15, Math.min(0.85, (avgZ + 2) / 4));
+        const alpha = Math.max(0.2, Math.min(0.9, (avgZ + 2.2) / 4.4));
 
         ctx.strokeStyle = `rgba(229, 152, 59, ${alpha})`;
-        ctx.lineWidth = avgZ > 0 ? 1.8 : 1.0;
+        ctx.lineWidth = avgZ > 0 ? 2.2 : 1.2;
 
         ctx.beginPath();
         ctx.moveTo(p1.px, p1.py);
@@ -152,13 +146,13 @@ const AICore3D = () => {
         ctx.stroke();
       });
 
-      // Render floating diamond particles
+      // 3. Render Particle Atmosphere
       particles.forEach((p) => {
         p.y -= p.speed;
-        if (p.y < -2.2) p.y = 2.2;
+        if (p.y < -2.4) p.y = 2.4;
 
         const projected = project([p.x, p.y, p.z]);
-        const alpha = Math.max(0.2, (projected.pz + 2.5) / 5);
+        const alpha = Math.max(0.15, (projected.pz + 2.5) / 5);
 
         ctx.fillStyle = `rgba(245, 158, 11, ${alpha})`;
         ctx.beginPath();
@@ -166,13 +160,13 @@ const AICore3D = () => {
         ctx.fill();
       });
 
-      // Render central AI Core point node
+      // 4. Render Central Emitting AI Core Node
       const centerProj = project([0, 0, 0]);
       ctx.fillStyle = '#E5983B';
       ctx.shadowColor = '#F59E0B';
-      ctx.shadowBlur = 20;
+      ctx.shadowBlur = 24;
       ctx.beginPath();
-      ctx.arc(centerProj.px, centerProj.py, 6, 0, Math.PI * 2);
+      ctx.arc(centerProj.px, centerProj.py, 7, 0, Math.PI * 2);
       ctx.fill();
       ctx.shadowBlur = 0;
 
@@ -189,7 +183,7 @@ const AICore3D = () => {
   }, []);
 
   return (
-    <div style={{ width: '100%', height: '100%', minHeight: '420px', position: 'relative' }}>
+    <div style={{ width: '100%', height: '100%', minHeight: '440px', position: 'relative' }}>
       <canvas ref={canvasRef} style={{ width: '100%', height: '100%', display: 'block' }} />
     </div>
   );
