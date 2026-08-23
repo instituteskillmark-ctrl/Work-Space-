@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
+import projectAipilotImg from '../assets/project-aipilot.png';
 import projectHotelImg from '../assets/project-hotel.png';
 import projectAitoolImg from '../assets/project-aitool.png';
 import projectMedicalImg from '../assets/project-medical.png';
@@ -11,40 +12,50 @@ const Projects = ({ standalone = true }) => {
   const approvedProjects = [
     {
       id: 'project-01',
-      num: '01 // HOSPITALITY & HOTEL EXPERIENCE',
-      title: 'Hotel Website',
-      category: 'Luxury Hotel & Booking Web Application',
-      description: 'Built to eliminate booking drop-offs caused by slow form reloads. I used client-side reactive state caching for room availability so guests can filter dates and inspect prices instantly. The toughest part was calculating dynamic seasonal rates on the fly without causing UI layout shifts.',
-      liveUrl: 'https://my-hotel23.vercel.app',
-      img: projectHotelImg,
-      badge: 'BROWSER PREVIEW'
+      num: '01 // FLAGSHIP AI CAREER PLATFORM',
+      title: 'AI Resume Pilot',
+      category: 'AI Resume Analyzer & ATS Intelligence Engine',
+      description: 'An AI-powered career agent platform engineered to analyze CVs and resumes in real time. It calculates ATS match scores, identifies missing keyword benchmarks, provides structural feedback, and generates tailored interview prep recommendations.',
+      liveUrl: 'https://ai-pilot-pink.vercel.app',
+      img: projectAipilotImg,
+      badge: 'FLAGSHIP AI TOOL'
     },
     {
       id: 'project-02',
-      num: '02 // ARTIFICIAL INTELLIGENCE TOOL',
+      num: '02 // HOSPITALITY & HOTEL EXPERIENCE',
+      title: 'Hotel Website',
+      category: 'Luxury Hotel & Booking Web Application',
+      description: 'Built to eliminate booking drop-offs caused by slow form reloads. I used client-side reactive state caching for room availability so guests can filter dates and inspect prices instantly.',
+      liveUrl: 'https://my-hotel23.vercel.app',
+      img: projectHotelImg,
+      badge: 'LUXURY HOSPITALITY'
+    },
+    {
+      id: 'project-03',
+      num: '03 // ARTIFICIAL INTELLIGENCE TOOL',
       title: 'AI Tool',
       category: 'AI Application & Generation Platform',
-      description: 'Tackled user drop-off caused by API latency by engineering a real-time token streaming interface paired with a canvas telemetry status bar. The main challenge was preventing browser memory leaks while rendering continuous text streams alongside 60fps background animations.',
+      description: 'Tackled user drop-off caused by API latency by engineering a real-time token streaming interface paired with a canvas telemetry status bar.',
       liveUrl: 'https://ai-tool-woad-rho.vercel.app',
       img: projectAitoolImg,
       badge: 'AI SAAS INTERFACE'
     },
     {
-      id: 'project-03',
-      num: '03 // HEALTHCARE PLATFORM',
+      id: 'project-04',
+      num: '04 // HEALTHCARE PLATFORM',
       title: 'Medical Website',
       category: 'Healthcare & Patient Management Platform',
-      description: 'Replaced confusing nested menus with a streamlined 3-step appointment triage wizard so patients locate specialist care quickly. I relied on keyboard-accessible dialog primitives, and the biggest hurdle was meeting strict WCAG AAA contrast standards across a dark dark-mode visual system.',
+      description: 'Replaced confusing nested menus with a streamlined 3-step appointment triage wizard so patients locate specialist care quickly.',
       liveUrl: 'https://medical-web-568k.vercel.app',
       img: projectMedicalImg,
       badge: 'MEDICAL PLATFORM'
     },
     {
-      id: 'project-04',
-      num: '04 // CREATIVE AGENCY STUDIO',
+      id: 'project-05',
+      num: '05 // CREATIVE AGENCY STUDIO',
       title: 'AI Agency Website',
       category: 'Agency Studio & Digital Experience',
-      description: 'Designed an interactive case-study showcase to prove agency capabilities through live browser demonstrations rather than static screenshots. I built modular lazy-loaded card components, navigating the challenge of keeping asset load times low while maintaining smooth hover transitions.',
+      description: 'Designed an interactive case-study showcase to prove agency capabilities through live browser demonstrations rather than static screenshots.',
       liveUrl: 'https://ai-agency-website-tau.vercel.app',
       img: projectAgencyImg,
       badge: 'AGENCY SHOWCASE'
