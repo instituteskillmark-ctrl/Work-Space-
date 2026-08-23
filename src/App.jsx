@@ -80,11 +80,6 @@ function App() {
           Skip to main content
         </a>
         <AppRoutes />
-        <footer style={{ marginTop: 'auto', padding: '24px 40px', borderTop: '1px solid var(--border-glass)', fontSize: '13px', color: 'var(--text-muted)', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
-          <p>© 2025 Hassan Ahmad. All Rights Reserved.</p>
-          <p>Built with Passion ♥</p>
-          <a href="#top" style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>Back to Top ↑</a>
-        </footer>
       </div>
     </BrowserRouter>
   );

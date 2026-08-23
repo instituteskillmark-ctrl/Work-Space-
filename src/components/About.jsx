@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
 import hassanPortraitImg from '../assets/hassan-portrait.jpg';
 
 const About = ({ standalone = true }) => {
+  const [activeSpec, setActiveSpec] = useState(0);
+
+  const specData = [
+    {
+      id: 'chatbots',
+      label: 'AI Chatbots',
+      title: 'SPECIALIZATION // AI CHATBOTS',
+      desc: 'Specialized in developing custom conversational AI chatbots, autonomous customer support agents, lead qualifying flows, and interactive web widgets.',
+      tag: 'CONVERSATIONAL AGENTS'
+    },
+    {
+      id: 'llm',
+      label: 'LLM Workflows',
+      title: 'SPECIALIZATION // LLM WORKFLOWS',
+      desc: 'Engineering robust prompt pipelines, RAG context retrieval architectures, autonomous agent workflows, and multi-model API synthesis.',
+      tag: 'PROMPT ARCHITECTURE'
+    },
+    {
+      id: 'aitools',
+      label: 'AI Tools & MVPs',
+      title: 'SPECIALIZATION // AI TOOLS & MVPS',
+      desc: 'Converting napkin ideas into functional AI SaaS tools, custom generator platforms, predictive engines, and production-ready Web AI prototypes.',
+      tag: 'PRODUCT TOOLING'
+    }
+  ];
+
   const capabilityIndicators = [
     { title: 'React & Web Engineering', example: 'Custom state architectures and responsive component systems' },
     { title: 'Canvas Graphics & Shaders', example: 'Real-time 60fps 3D crystal geometry & volumetric light rendering' },
@@ -30,7 +56,7 @@ const About = ({ standalone = true }) => {
           
           {/* Column 1: Custom Portrait Showcase Frame */}
           <div 
-            className="glossy-card asymmetric-hero-card" 
+            className="glossy-card" 
             style={{ 
               padding: '20px', 
               display: 'flex', 
@@ -97,24 +123,48 @@ const About = ({ standalone = true }) => {
               </div>
             </div>
 
-            {/* AI Specialization & Chatbot Focus Block */}
-            <div style={{ padding: '14px 16px', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--border-specular)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '6px' }}>
-                SPECIALIZATION // CHATBOTS & AI TOOLS
+            {/* AI Specialization & Interactive Dynamic Tabs Block */}
+            <div style={{ padding: '16px', borderRadius: '10px', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--border-specular)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.12em' }}>
+                  {specData[activeSpec].title}
+                </div>
+                <span className="status-badge" style={{ margin: 0, padding: '2px 6px', fontSize: '0.58rem' }}>
+                  {specData[activeSpec].tag}
+                </span>
               </div>
-              <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: '1.5', marginBottom: '10px' }}>
-                Specialized in developing custom AI chatbots, autonomous conversational agents, and intelligent web tools tailored for business growth.
+
+              <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', lineHeight: '1.5', marginBottom: '14px', minHeight: '52px' }}>
+                {specData[activeSpec].desc}
               </p>
+
+              {/* Interactive Pill Tabs */}
               <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(229, 152, 59, 0.14)', border: '1px solid var(--border-gold)', color: 'var(--accent-gold)' }}>
-                  AI Chatbots
-                </span>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-specular)', color: 'var(--text-muted)' }}>
-                  LLM Workflows
-                </span>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--border-specular)', color: 'var(--text-muted)' }}>
-                  AI Tools & MVPs
-                </span>
+                {specData.map((spec, idx) => {
+                  const isSelected = activeSpec === idx;
+                  return (
+                    <button
+                      key={spec.id}
+                      type="button"
+                      onClick={() => setActiveSpec(idx)}
+                      style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '0.64rem',
+                        padding: '4px 10px',
+                        borderRadius: '5px',
+                        cursor: 'pointer',
+                        border: isSelected ? '1px solid var(--border-gold)' : '1px solid var(--border-specular)',
+                        background: isSelected ? 'rgba(229, 152, 59, 0.18)' : 'rgba(255, 255, 255, 0.03)',
+                        color: isSelected ? 'var(--accent-gold)' : 'var(--text-muted)',
+                        boxShadow: isSelected ? '0 0 12px rgba(229, 152, 59, 0.25)' : 'none',
+                        transition: 'all 0.25s ease'
+                      }}
+                      data-cursor-text="VIEW"
+                    >
+                      {spec.label}
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>
