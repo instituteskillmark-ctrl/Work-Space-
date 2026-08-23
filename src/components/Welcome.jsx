@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
-import heroWorkspaceImg from '../assets/hero-workspace-bg.png';
+import heroCrystalWorkspaceImg from '../assets/hero-crystal-workspace.png';
 
 const Welcome = () => {
   const techStack = [
@@ -38,7 +38,7 @@ const Welcome = () => {
           minHeight: '80vh',
           display: 'flex',
           alignItems: 'center',
-          backgroundImage: `url(${heroWorkspaceImg})`,
+          backgroundImage: `url(${heroCrystalWorkspaceImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',
