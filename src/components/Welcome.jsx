@@ -1,21 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
-import heroDeskSetupImg from '../assets/hero-desk-setup.png';
+import heroDeskAmberImg from '../assets/hero-desk-amber.png';
 
-// User-provided developer workspace setup photo
-const HERO_PHOTO = heroDeskSetupImg;
+// User-provided developer workspace setup photo (Amber Gold Theme Adjusted)
+const HERO_PHOTO = heroDeskAmberImg;
 
 const Welcome = () => {
   const techStack = [
-    { name: 'React 19', tag: 'FRONTEND', desc: 'UI & State' },
+    { name: 'Google Antigravity', tag: 'AGENTIC AI', desc: 'Agentic Engineering' },
+    { name: 'ChatGPT / GPT-4o', tag: 'AI LLM', desc: 'Conversational LLMs' },
+    { name: 'Claude 3.5 Sonnet', tag: 'AI REASONING', desc: 'Complex Code Logic' },
+    { name: 'Midjourney & AI', tag: 'AI MEDIA', desc: 'Generative Visuals' },
+    { name: 'React 19', tag: 'FRONTEND', desc: 'UI & State Systems' },
     { name: 'Next.js', tag: 'FRAMEWORK', desc: 'App Architecture' },
     { name: 'Node.js', tag: 'BACKEND', desc: 'API & Runtime' },
     { name: 'TypeScript', tag: 'LANGUAGE', desc: 'Typed Architecture' },
     { name: 'OpenAI API', tag: 'AI CORE', desc: 'LLM & Agents' },
     { name: 'Python', tag: 'AI / SCRIPT', desc: 'Data & Automation' },
     { name: 'Three.js', tag: 'GRAPHICS', desc: '3D & Shaders' },
-    { name: 'Tailwind CSS', tag: 'STYLING', desc: 'Design Tokens' }
+    { name: 'Tailwind CSS', tag: 'STYLING', desc: 'Design System Tokens' }
   ];
 
   return (
@@ -49,7 +53,7 @@ const Welcome = () => {
                 I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.
               </p>
 
-              {/* Functional Action Buttons: Primary & Secondary */}
+              {/* Functional Action Buttons: Primary & Secondary with 3D Shimmer Animations */}
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
                 <Link 
                   to="/projects" 
@@ -85,9 +89,10 @@ const Welcome = () => {
               </div>
             </div>
 
-            {/* Right Photo Frame Column (Candid Photo of Hassan Working with Soft Amber Rim Light) */}
+            {/* Right Photo Frame Column with Floating 3D Micro-Animation */}
             <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center' }}>
               <div 
+                className="hero-photo-frame"
                 style={{ 
                   position: 'relative',
                   width: '100%',
@@ -96,7 +101,6 @@ const Welcome = () => {
                   borderRadius: '16px',
                   overflow: 'hidden',
                   border: '1px solid var(--border-gold)',
-                  boxShadow: '0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(229, 152, 59, 0.25), inset 0 0 20px rgba(229, 152, 59, 0.15)',
                   background: 'rgba(7, 8, 10, 0.9)'
                 }}
               >
@@ -117,7 +121,7 @@ const Welcome = () => {
                     inset: 0,
                     pointerEvents: 'none',
                     zIndex: 2,
-                    background: 'radial-gradient(ellipse at center, transparent 40%, rgba(7, 8, 10, 0.6) 80%, rgba(7, 8, 10, 0.95) 100%), linear-gradient(180deg, rgba(7, 8, 10, 0.4) 0%, transparent 35%, transparent 65%, rgba(7, 8, 10, 0.85) 100%)'
+                    background: 'radial-gradient(ellipse at center, transparent 45%, rgba(7, 8, 10, 0.5) 80%, rgba(7, 8, 10, 0.92) 100%), linear-gradient(180deg, rgba(7, 8, 10, 0.3) 0%, transparent 35%, transparent 65%, rgba(7, 8, 10, 0.8) 100%)'
                   }}
                 />
 
@@ -128,21 +132,21 @@ const Welcome = () => {
                     inset: 0,
                     pointerEvents: 'none',
                     zIndex: 2,
-                    boxShadow: 'inset 4px 0 25px rgba(229, 152, 59, 0.35), inset 0 -4px 25px rgba(229, 152, 59, 0.3)'
+                    boxShadow: 'inset 4px 0 25px rgba(229, 152, 59, 0.4), inset 0 -4px 25px rgba(229, 152, 59, 0.35)'
                   }}
                 />
 
-                {/* Actual Photo (User provided developer desk setup) */}
+                {/* Actual Photo (Warm Amber Theme Adjusted Desk Setup) */}
                 <img 
                   src={HERO_PHOTO} 
-                  alt="Hassan Ahmad — Dual Monitor Workspace Setup" 
+                  alt="Hassan Ahmad — Amber Theme Dual Monitor Workspace Setup" 
                   style={{
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
                     objectPosition: 'center',
                     display: 'block',
-                    filter: 'contrast(1.1) brightness(0.92) sepia(0.2) hue-rotate(-15deg)'
+                    filter: 'contrast(1.08) brightness(0.98)'
                   }}
                 />
               </div>

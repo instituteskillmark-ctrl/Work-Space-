@@ -312,7 +312,7 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.75), 0 0 35px rgba(229, 152, 59, 0.2);
 }
 
-/* Buttons */
+/* 3D Tactile & Shimmer Button Animation System */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -331,14 +331,39 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(229, 152, 59, 0.35);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(229, 152, 59, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: rotate(25deg);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.btn-primary:hover::before {
+  transform: rotate(25deg) translateX(320%);
 }
 
 .btn-primary:hover {
   background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  box-shadow: 0 12px 35px rgba(229, 152, 59, 0.55);
-  transform: translateY(-2px);
+  box-shadow: 0 14px 38px rgba(229, 152, 59, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: perspective(600px) translateZ(8px) translateY(-3px);
+}
+
+.btn-primary:active {
+  transform: perspective(600px) translateZ(0px) translateY(1px);
+  box-shadow: 0 4px 15px rgba(229, 152, 59, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .btn-outline {
@@ -360,14 +385,63 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   cursor: pointer;
   backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(229, 152, 59, 0.35), transparent);
+  transform: rotate(25deg);
+  transition: transform 0.6s ease;
+  pointer-events: none;
+}
+
+.btn-outline:hover::before {
+  transform: rotate(25deg) translateX(320%);
 }
 
 .btn-outline:hover {
   border-color: var(--accent-gold);
   color: var(--accent-gold);
-  background: rgba(229, 152, 59, 0.08);
-  transform: translateY(-2px);
+  background: rgba(229, 152, 59, 0.12);
+  box-shadow: 0 12px 30px rgba(229, 152, 59, 0.3), inset 0 1px 0 rgba(229, 152, 59, 0.3);
+  transform: perspective(600px) translateZ(8px) translateY(-3px);
+}
+
+.btn-outline:active {
+  transform: perspective(600px) translateZ(0px) translateY(1px);
+}
+
+/* Hero Floating 3D Frame & Glow Pulse Animations */
+@keyframes floatHeroFrame {
+  0%, 100% {
+    transform: translateY(0px) rotate(0.4deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(229, 152, 59, 0.25), inset 0 0 20px rgba(229, 152, 59, 0.15);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-0.4deg);
+    box-shadow: 0 30px 65px rgba(0, 0, 0, 0.9), 0 0 55px rgba(229, 152, 59, 0.4), inset 0 0 28px rgba(229, 152, 59, 0.25);
+  }
+}
+
+.hero-photo-frame {
+  animation: floatHeroFrame 6s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.hero-photo-frame:hover {
+  animation-play-state: paused;
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 35px 75px rgba(0, 0, 0, 0.95), 0 0 60px rgba(229, 152, 59, 0.5);
 }
 
 /* Custom Form Input Fields — Obsidian Glass & Amber Focus */
