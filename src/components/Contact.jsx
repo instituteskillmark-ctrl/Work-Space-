@@ -25,7 +25,7 @@ const Contact = ({ standalone = true }) => {
       {standalone && (
         <PageMeta 
           title="Contact & Start a Project — Hassan Ahmad"
-          description="Contact Hassan Ahmad, AI Creative Developer, via email at novaagency79@gmail.com."
+          description="Contact Hassan Ahmad, AI Creative Developer, via email at hassan217175@gmail.com."
         />
       )}
       <div className="main-wrapper">
@@ -105,8 +105,8 @@ const Contact = ({ standalone = true }) => {
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '4px' }}>
                 PRIMARY EMAIL
               </div>
-              <a href="mailto:novaagency79@gmail.com" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600 }}>
-                novaagency79@gmail.com
+              <a href="mailto:hassan217175@gmail.com" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600 }}>
+                hassan217175@gmail.com
               </a>
             </div>
 

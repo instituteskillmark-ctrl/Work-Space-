@@ -10,33 +10,33 @@ const Services = ({ standalone = true }) => {
       id: 'service-01',
       num: '01',
       name: 'AI-POWERED WEBSITE DEVELOPMENT',
-      shortDesc: 'Modern, responsive, and professional websites for businesses and brands.',
-      fullDesc: 'End-to-end development of intelligent, fast, and modern web applications leveraging cutting-edge AI integrations, component frameworks, and responsive UX architecture.',
-      deliverables: ['Custom Web Architecture', 'AI Tool Integrations', 'Responsive Layout System', 'SEO & Performance Optimization']
+      shortDesc: 'Modern, responsive, and high-performance websites built for growth.',
+      fullDesc: 'I build fast, responsive web apps from the ground up, integrating smart AI features and clean UI frameworks that make your product stand out and perform reliably.',
+      deliverables: ['Custom Web Architecture', 'AI Feature Integrations', 'Responsive Layout System', 'SEO & Speed Optimization']
     },
     {
       id: 'service-02',
       num: '02',
       name: 'UI/UX & WEBSITE REDESIGN',
-      shortDesc: 'Improving outdated websites with clean, modern, and user-friendly designs.',
-      fullDesc: 'Transforming legacy websites into high-conversion visual experiences with dark obsidian aesthetics, cinematic typography, specular lighting, and fluid micro-interactions.',
-      deliverables: ['UI/UX Design Direction', 'Modern Interface Overhaul', 'Design System Systematization', 'Interactive Prototypes']
+      shortDesc: 'Turning outdated sites into clean, high-conversion visual experiences.',
+      fullDesc: 'I overhaul clunky or outdated websites into modern dark-mode visual experiences with smooth micro-animations, clear typography, and intuitive user flows.',
+      deliverables: ['UI/UX Design Direction', 'Modern Interface Overhaul', 'Design System Architecture', 'Interactive Prototypes']
     },
     {
       id: 'service-03',
       num: '03',
       name: 'AI CHATBOT SOLUTIONS',
-      shortDesc: 'Custom website chatbots for customer support and user engagement.',
-      fullDesc: 'Deploying autonomous conversational AI agents and intelligent chatbot widgets tailored to handle customer support, qualify leads, and elevate site engagement.',
+      shortDesc: 'Custom AI chatbots for support, lead capture, and engagement.',
+      fullDesc: 'I design and integrate custom AI chatbots for your website—handling visitor questions, qualifying leads, and keeping users engaged 24/7.',
       deliverables: ['Custom Voice/Text Chatbots', 'LLM Prompt Architecture', 'Customer Support Automation', 'Lead Qualification Flow']
     },
     {
       id: 'service-04',
       num: '04',
       name: 'AI TOOLS & MVP DEVELOPMENT',
-      shortDesc: 'Turning ideas into functional AI-powered tools and MVPs.',
-      fullDesc: 'Converting napkin ideas and concepts into market-ready, functional AI tools and SaaS prototypes with rapid development velocity and production stability.',
-      deliverables: ['Rapid Prototype Building', 'AI API Synthesis', 'SaaS Architecture', 'Full Product Deployment']
+      shortDesc: 'Turning product ideas into working AI SaaS tools and MVPs.',
+      fullDesc: 'I turn your product concepts into working AI tools and SaaS prototypes quickly, building production-ready MVPs that real users can test immediately.',
+      deliverables: ['Rapid Prototype Building', 'AI Model Integration', 'SaaS Tool Architecture', 'Full Product Deployment']
     }
   ];
 
@@ -47,17 +47,17 @@ const Services = ({ standalone = true }) => {
       {standalone && (
         <PageMeta 
           title="Services — Hassan Ahmad | AI Creative Developer"
-          description="Services offered by Hassan Ahmad including AI-Powered Website Development, UI/UX Redesign, AI Chatbots, and MVP Development."
+          description="Explore services offered by Hassan Ahmad including AI-Powered Website Development, UI/UX Redesign, AI Chatbots, and MVP Development."
         />
       )}
       <div className="main-wrapper">
         <div className="section-divider-diagonal" style={{ marginTop: '0', marginBottom: '40px' }} />
-        <span className="eyebrow">05 SERVICES // CAPABILITIES</span>
+        <span className="eyebrow">05 SERVICES // WHAT I DO</span>
         <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '40px' }}>
-          INTERACTIVE STUDIO <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.3)' }}>SERVICE SELECTOR</span>
+          HOW I CAN HELP <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.3)' }}>BUILD YOUR PRODUCT</span>
         </h2>
 
-        {/* Interactive Studio Selector Composition with Asymmetric Panel Styling */}
+        {/* Interactive Service Selector */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '36px', marginBottom: '48px', alignItems: 'stretch' }}>
           {/* Vertical Interactive Service Index */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -107,7 +107,7 @@ const Services = ({ standalone = true }) => {
                   FEATURED OFFERING // SERVICE {currentService.num}
                 </span>
                 <span className="status-badge" style={{ margin: 0, padding: '4px 12px', fontSize: '0.65rem' }}>
-                  STUDIO SOLUTION
+                  FEATURED SERVICE
                 </span>
               </div>
 
