@@ -99,8 +99,8 @@ const SkillsGraph = () => {
           />
         </div>
 
-        {/* Domain Selection Tabs (All 6 Domain Cards) */}
-        <div style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '12px' }}>
+        {/* Domain Selection Tabs (All 6 Domain Cards with 3D Elevate Animation & Display Font) */}
+        <div style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '14px' }}>
           {skillNodes.map((node) => {
             const isSelected = activeCategory === node.id;
             return (
@@ -110,21 +110,22 @@ const SkillsGraph = () => {
                 onMouseEnter={() => setActiveCategory(node.id)}
                 className="glossy-card"
                 style={{
-                  padding: '14px 18px',
+                  padding: '16px 20px',
                   cursor: 'pointer',
                   borderRadius: '10px',
                   border: isSelected ? '1px solid var(--accent-gold)' : '1px solid var(--border-specular)',
-                  background: isSelected ? 'rgba(229, 152, 59, 0.18)' : 'rgba(255, 255, 255, 0.02)',
-                  boxShadow: isSelected ? '0 0 25px rgba(229, 152, 59, 0.3)' : 'none',
+                  background: isSelected ? 'linear-gradient(135deg, rgba(229, 152, 59, 0.22) 0%, rgba(11, 13, 18, 0.9) 100%)' : 'rgba(255, 255, 255, 0.03)',
+                  boxShadow: isSelected ? '0 12px 30px rgba(229, 152, 59, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)' : '0 6px 16px rgba(0, 0, 0, 0.4)',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '10px',
-                  transition: 'all 0.3s ease'
+                  gap: '12px',
+                  transform: isSelected ? 'perspective(600px) translateZ(8px) translateY(-3px)' : 'none',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
                 }}
                 data-cursor-text="DOMAIN"
               >
-                <span style={{ fontSize: '1rem', color: 'var(--accent-gold)' }}>{node.icon}</span>
-                <span className="card-subheading" style={{ fontSize: '0.82rem', color: isSelected ? 'var(--accent-gold)' : '#FFF' }}>
+                <span style={{ fontSize: '1.1rem', color: 'var(--accent-gold)' }}>{node.icon}</span>
+                <span className="card-subheading" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '0.05em', color: isSelected ? 'var(--accent-gold)' : '#FFF' }}>
                   {node.title}
                 </span>
               </div>
