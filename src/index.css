@@ -644,3 +644,66 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
   }
 }
+
+/* Responsive Mobile Navigation Drawer */
+.mobile-toggle-btn {
+  display: none;
+  background: rgba(229, 152, 59, 0.1);
+  border: 1px solid var(--border-gold);
+  color: var(--accent-gold);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.mobile-toggle-btn:hover {
+  background: rgba(229, 152, 59, 0.2);
+  box-shadow: 0 0 15px rgba(229, 152, 59, 0.3);
+}
+
+.mobile-nav-drawer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(7, 8, 10, 0.98);
+  backdrop-filter: blur(25px) saturate(180%);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
+  z-index: 600;
+  animation: slideDownNav 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDownNav {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .mobile-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .top-header {
+    padding: 14px 20px !important;
+  }
+  .brand-name {
+    font-size: 0.88rem;
+  }
+  .brand-sub {
+    font-size: 0.58rem;
+  }
+}

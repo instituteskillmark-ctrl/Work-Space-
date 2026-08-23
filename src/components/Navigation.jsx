@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Navigation = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const destinations = [
     { id: 'about', path: '/about', label: 'About' },
     { id: 'projects', path: '/projects', label: 'Projects' },
@@ -12,21 +14,52 @@ const Navigation = () => {
   ];
 
   return (
-    <nav id="main-navigation" aria-label="Main Navigation">
-      <ul className="nav-grid">
-        {destinations.map((dest) => (
-          <li key={dest.id}>
+    <>
+      {/* Desktop Navigation Links */}
+      <nav id="main-navigation" className="desktop-nav" aria-label="Main Navigation">
+        <ul className="nav-grid">
+          {destinations.map((dest) => (
+            <li key={dest.id}>
+              <NavLink
+                to={dest.path}
+                className={({ isActive }) => (isActive ? 'nav-link-btn active' : 'nav-link-btn')}
+                id={`nav-${dest.id}`}
+              >
+                {dest.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      {/* Mobile Toggle Button */}
+      <button 
+        type="button"
+        className="mobile-toggle-btn"
+        onClick={() => setMobileOpen(!mobileOpen)}
+        aria-label="Toggle Navigation Menu"
+      >
+        <span>{mobileOpen ? '✕ CLOSE' : '☰ MENU'}</span>
+      </button>
+
+      {/* Mobile Slide-Down Drawer Navigation */}
+      {mobileOpen && (
+        <div className="mobile-nav-drawer">
+          {destinations.map((dest) => (
             <NavLink
+              key={dest.id}
               to={dest.path}
+              onClick={() => setMobileOpen(false)}
               className={({ isActive }) => (isActive ? 'nav-link-btn active' : 'nav-link-btn')}
-              id={`nav-${dest.id}`}
+              style={{ width: '100%', justifyContent: 'space-between', padding: '12px 20px', fontSize: '0.9rem' }}
             >
-              {dest.label}
+              <span>{dest.label}</span>
+              <span style={{ color: 'var(--accent-gold)' }}>→</span>
             </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 
