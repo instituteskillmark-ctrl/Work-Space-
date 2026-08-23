@@ -96,7 +96,7 @@ const AILab = ({ standalone = true }) => {
 
           {/* Right 3D Lab Artifact Engine */}
           <div 
-            className="glossy-card asymmetric-hero-card" 
+            className="glossy-card" 
             style={{ 
               padding: '24px', 
               minHeight: '440px', 
@@ -130,14 +130,14 @@ const AILab = ({ standalone = true }) => {
                 marginBottom: '18px'
               }}
             >
-              {/* Amber Specular Color-Grade Overlay to match website dark obsidian amber theme */}
+              {/* Amber Specular Color-Grade Overlay (Eliminates Blue, Creates Warm Gold Helix Glow) */}
               <div 
                 style={{
                   position: 'absolute',
                   inset: 0,
                   pointerEvents: 'none',
                   zIndex: 2,
-                  background: 'radial-gradient(circle at 50% 50%, rgba(229, 152, 59, 0.3) 0%, rgba(11, 13, 18, 0.45) 60%, rgba(7, 8, 10, 0.85) 100%)',
+                  background: 'radial-gradient(circle at 50% 50%, rgba(229, 152, 59, 0.35) 0%, rgba(11, 13, 18, 0.5) 70%, #07080a 100%)',
                   mixBlendMode: 'color-dodge'
                 }}
               />
@@ -159,7 +159,7 @@ const AILab = ({ standalone = true }) => {
                   objectFit: 'cover',
                   objectPosition: 'center',
                   display: 'block',
-                  filter: 'brightness(0.95) contrast(1.1)'
+                  filter: 'sepia(0.85) hue-rotate(-20deg) saturate(1.6) brightness(0.88) contrast(1.15)'
                 }}
               />
             </div>

@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
+import projectHotelImg from '../assets/project-hotel.png';
+import projectAitoolImg from '../assets/project-aitool.png';
+import projectMedicalImg from '../assets/project-medical.png';
+import projectAgencyImg from '../assets/project-agency.png';
 
 const Projects = ({ standalone = true }) => {
-  // Hassan Ahmad's Approved Projects with Distinct Case-Study Descriptions
+  // Hassan Ahmad's Approved Projects with Real UI Preview Images & Case-Study Descriptions
   const approvedProjects = [
     {
       id: 'project-01',
@@ -12,7 +16,7 @@ const Projects = ({ standalone = true }) => {
       category: 'Luxury Hotel & Booking Web Application',
       description: 'Built to eliminate booking drop-offs caused by slow form reloads. I used client-side reactive state caching for room availability so guests can filter dates and inspect prices instantly. The toughest part was calculating dynamic seasonal rates on the fly without causing UI layout shifts.',
       liveUrl: 'https://my-hotel23.vercel.app',
-      visualStyle: 'linear-gradient(135deg, rgba(229, 152, 59, 0.25) 0%, rgba(11, 13, 18, 0.95) 100%)',
+      img: projectHotelImg,
       badge: 'BROWSER PREVIEW'
     },
     {
@@ -22,7 +26,7 @@ const Projects = ({ standalone = true }) => {
       category: 'AI Application & Generation Platform',
       description: 'Tackled user drop-off caused by API latency by engineering a real-time token streaming interface paired with a canvas telemetry status bar. The main challenge was preventing browser memory leaks while rendering continuous text streams alongside 60fps background animations.',
       liveUrl: 'https://ai-tool-woad-rho.vercel.app',
-      visualStyle: 'linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(18, 20, 28, 0.95) 100%)',
+      img: projectAitoolImg,
       badge: 'AI SAAS INTERFACE'
     },
     {
@@ -32,7 +36,7 @@ const Projects = ({ standalone = true }) => {
       category: 'Healthcare & Patient Management Platform',
       description: 'Replaced confusing nested menus with a streamlined 3-step appointment triage wizard so patients locate specialist care quickly. I relied on keyboard-accessible dialog primitives, and the biggest hurdle was meeting strict WCAG AAA contrast standards across a dark dark-mode visual system.',
       liveUrl: 'https://medical-web-568k.vercel.app',
-      visualStyle: 'linear-gradient(135deg, rgba(229, 152, 59, 0.18) 0%, rgba(7, 8, 10, 0.95) 100%)',
+      img: projectMedicalImg,
       badge: 'MEDICAL PLATFORM'
     },
     {
@@ -42,7 +46,7 @@ const Projects = ({ standalone = true }) => {
       category: 'Agency Studio & Digital Experience',
       description: 'Designed an interactive case-study showcase to prove agency capabilities through live browser demonstrations rather than static screenshots. I built modular lazy-loaded card components, navigating the challenge of keeping asset load times low while maintaining smooth hover transitions.',
       liveUrl: 'https://ai-agency-website-tau.vercel.app',
-      visualStyle: 'linear-gradient(135deg, rgba(229, 152, 59, 0.28) 0%, rgba(15, 18, 25, 0.95) 100%)',
+      img: projectAgencyImg,
       badge: 'AGENCY SHOWCASE'
     }
   ];
@@ -84,43 +88,44 @@ const Projects = ({ standalone = true }) => {
                 style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: isFeatured ? '36px' : '28px' }}
               >
                 <div>
-                  {/* Visual Case-Study Preview Frame */}
+                  {/* Visual Case-Study Preview Frame with Real Image Mockup */}
                   <div style={{
                     height: isFeatured ? '250px' : '210px',
                     width: '100%',
                     borderRadius: '10px',
-                    background: project.visualStyle,
                     border: '1px solid var(--border-gold)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'space-between',
-                    padding: '16px',
-                    marginBottom: '24px',
                     position: 'relative',
                     overflow: 'hidden',
-                    boxShadow: 'inset 0 0 30px rgba(0, 0, 0, 0.6)'
+                    marginBottom: '24px',
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.5)'
                   }}>
-                    {/* Top Mockup Browser Controls */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <img 
+                      src={project.img} 
+                      alt={`${project.title} — Real Web Application Preview`}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'top center',
+                        display: 'block',
+                        filter: 'brightness(0.92) contrast(1.05)'
+                      }}
+                    />
+
+                    {/* Top Mockup Browser Controls & Badge Overlay */}
+                    <div style={{ position: 'absolute', top: 0, inset: '0 0 auto 0', padding: '10px 14px', background: 'linear-gradient(180deg, rgba(7, 8, 10, 0.88) 0%, rgba(7, 8, 10, 0.3) 70%, transparent 100%)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', zIndex: 2 }}>
                       <div style={{ display: 'flex', gap: '6px' }}>
-                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)' }} />
-                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)' }} />
-                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255,255,255,0.2)' }} />
+                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(229, 152, 59, 0.8)' }} />
+                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255, 255, 255, 0.3)' }} />
+                        <span style={{ width: '8px', height: '8px', borderRadius: '50%', backgroundColor: 'rgba(255, 255, 255, 0.3)' }} />
                       </div>
-                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--accent-gold)', background: 'rgba(7, 8, 10, 0.7)', padding: '2px 8px', borderRadius: '4px' }}>
+                      <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--accent-gold)', background: 'rgba(7, 8, 10, 0.9)', border: '1px solid var(--border-gold)', padding: '2px 8px', borderRadius: '4px' }}>
                         {project.badge}
                       </span>
                     </div>
 
-                    {/* Center Title Display */}
-                    <div style={{ textAlign: 'center' }}>
-                      <h4 style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: isFeatured ? '1.7rem' : '1.4rem', color: '#FFF', letterSpacing: '0.04em' }}>
-                        {project.title}
-                      </h4>
-                    </div>
-
-                    {/* Bottom URL pill */}
-                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--text-muted)', textAlign: 'center' }}>
+                    {/* Bottom URL Pill Overlay */}
+                    <div style={{ position: 'absolute', bottom: '10px', left: '12px', zIndex: 2, fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--accent-gold)', background: 'rgba(7, 8, 10, 0.85)', padding: '3px 10px', borderRadius: '4px', border: '1px solid var(--border-specular)' }}>
                       {project.liveUrl.replace('https://', '')}
                     </div>
                   </div>

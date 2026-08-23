@@ -27,14 +27,14 @@ const Welcome = () => {
         description="Welcome to the AI Creative Developer workspace of Hassan Ahmad."
       />
 
-      {/* Dark Legibility Gradient Overlay (Left Text Protection -> Transparent Amber Glow Right) */}
+      {/* Smooth Multi-Stop Environmental Overlay (Integrates Crystal Seamlessly into Space) */}
       <div 
         style={{
           position: 'absolute',
           inset: 0,
           pointerEvents: 'none',
           zIndex: 1,
-          background: 'linear-gradient(90deg, rgba(7, 8, 10, 0.88) 0%, rgba(7, 8, 10, 0.6) 38%, rgba(7, 8, 10, 0.05) 68%, rgba(7, 8, 10, 0.25) 100%)'
+          background: 'radial-gradient(ellipse at 70% 50%, rgba(7, 8, 10, 0.15) 0%, rgba(7, 8, 10, 0.65) 45%, rgba(7, 8, 10, 0.95) 80%, #07080a 100%), linear-gradient(90deg, #07080a 0%, rgba(7, 8, 10, 0.88) 35%, transparent 68%)'
         }}
       />
 
@@ -57,15 +57,24 @@ const Welcome = () => {
           </p>
 
           {/* Functional Action Buttons: Primary & Secondary */}
-          <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
             <Link 
               to="/projects" 
               className="btn-primary" 
               id="view-work-hero-btn"
-              data-cursor-text="VIEW"
-              style={{ padding: '12px 28px', fontSize: '0.85rem' }}
+              data-cursor-text="WORK"
+              style={{ padding: '12px 26px', fontSize: '0.85rem' }}
             >
               VIEW MY WORK →
+            </Link>
+            <Link 
+              to="/about" 
+              className="btn-outline" 
+              id="about-me-hero-btn"
+              data-cursor-text="ABOUT"
+              style={{ padding: '12px 22px', fontSize: '0.85rem', borderColor: 'var(--border-gold)', color: 'var(--accent-gold)' }}
+            >
+              ABOUT ME →
             </Link>
             <a 
               href="#download-cv" 
@@ -76,7 +85,7 @@ const Welcome = () => {
                 e.preventDefault();
                 alert('Hassan Ahmad CV download started.');
               }}
-              style={{ padding: '12px 24px', fontSize: '0.85rem' }}
+              style={{ padding: '12px 20px', fontSize: '0.85rem' }}
             >
               DOWNLOAD CV ⤓
             </a>
