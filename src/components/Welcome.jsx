@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
-import heroCrystalWorkspaceImg from '../assets/hero-crystal-workspace.png';
 
 const Welcome = () => {
   const techStack = [
@@ -20,7 +19,7 @@ const Welcome = () => {
       id="main-content" 
       className="section-wrapper" 
       style={{ 
-        paddingTop: '50px', 
+        paddingTop: '40px', 
         paddingBottom: '60px', 
         position: 'relative', 
         overflow: 'hidden'
@@ -31,50 +30,15 @@ const Welcome = () => {
         description="Welcome to the AI Creative Developer workspace of Hassan Ahmad."
       />
 
-      {/* Hero Section Container with Right Workspace Graphic */}
-      <div 
-        style={{
-          position: 'relative',
-          minHeight: '80vh',
-          display: 'flex',
-          alignItems: 'center',
-          backgroundImage: `url(${heroCrystalWorkspaceImg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'right center',
-          backgroundRepeat: 'no-repeat',
-          borderRadius: '16px',
-          overflow: 'hidden',
-          marginBottom: '56px'
-        }}
-      >
-        {/* Text Protection Overlay for Left Column */}
-        <div 
-          style={{
-            position: 'absolute',
-            inset: 0,
-            pointerEvents: 'none',
-            zIndex: 1,
-            background: 'linear-gradient(90deg, #07080a 0%, rgba(7, 8, 10, 0.88) 40%, rgba(7, 8, 10, 0.4) 65%, transparent 85%)'
-          }}
-        />
-
-        <div 
-          className="main-wrapper" 
-          style={{ 
-            position: 'relative', 
-            zIndex: 3, 
-            width: '100%',
-            paddingTop: '20px',
-            paddingBottom: '20px'
-          }}
-        >
-          <div style={{ maxWidth: '560px' }}>
-            {/* Left Content Column (Headline, Subtitle, CTAs) */}
+      {/* Pure Obsidian & Amber Specular Glass Shine Hero Container (100% Mobile Clean & Responsive) */}
+      <div className="main-wrapper">
+        <div className="hero-glass-card">
+          <div style={{ maxWidth: '640px', position: 'relative', zIndex: 3 }}>
             <span className="eyebrow">AI CREATIVE DEVELOPER</span>
-            <h1 style={{ fontSize: 'clamp(2.3rem, 4.5vw, 3.6rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.08, letterSpacing: '-0.02em', fontWeight: 800 }}>
+            <h1 style={{ fontSize: 'clamp(2.1rem, 5vw, 3.6rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.1, letterSpacing: '-0.02em', fontWeight: 800 }}>
               I BUILD DIGITAL EXPERIENCES THAT FEEL <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.45)' }}>ALIVE.</span>
             </h1>
-            <p style={{ fontSize: '1.1rem', color: 'var(--text-secondary)', marginBottom: '36px', maxWidth: '480px', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '1.08rem', color: 'var(--text-secondary)', marginBottom: '36px', maxWidth: '520px', lineHeight: 1.65 }}>
               I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.
             </p>
 

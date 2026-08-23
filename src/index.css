@@ -597,3 +597,50 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
   }
 }
+
+/* Glass Shine Hero Container */
+.hero-glass-card {
+  position: relative;
+  min-height: calc(75vh - 70px);
+  display: flex;
+  align-items: center;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 56px;
+  background: linear-gradient(135deg, rgba(15, 18, 25, 0.95) 0%, rgba(11, 13, 18, 0.88) 50%, rgba(7, 8, 10, 0.98) 100%);
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 0 50px rgba(229, 152, 59, 0.12);
+  padding: 56px 40px;
+}
+
+.hero-glass-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 70%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(229, 152, 59, 0.2) 0%, rgba(229, 152, 59, 0.05) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero-glass-card {
+    padding: 36px 20px;
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+}
