@@ -76,14 +76,14 @@ const AILab = ({ standalone = true }) => {
                   data-cursor-text="LAB"
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)' }}>
+                    <span className="card-eyebrow" style={{ fontSize: '0.7rem' }}>
                       0{index + 1} // {exp.category}
                     </span>
                     <span className="status-badge" style={{ fontSize: '0.62rem', padding: '2px 8px' }}>
                       {exp.status}
                     </span>
                   </div>
-                  <h3 style={{ fontSize: '1.15rem', color: isSelected ? 'var(--accent-gold)' : '#FFF', marginBottom: '8px' }}>
+                  <h3 className="card-subheading" style={{ fontSize: '1.15rem', color: isSelected ? 'var(--accent-gold)' : '#FFF', marginBottom: '8px' }}>
                     {exp.title}
                   </h3>
                   <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>
@@ -110,7 +110,7 @@ const AILab = ({ standalone = true }) => {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', zIndex: 3, marginBottom: '16px' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', letterSpacing: '0.15em' }}>
+              <span className="card-eyebrow">
                 LAB ENGINE // SIMULATION
               </span>
               <span className="status-badge" style={{ margin: 0, padding: '3px 8px', fontSize: '0.62rem' }}>

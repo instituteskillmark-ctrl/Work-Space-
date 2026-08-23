@@ -41,7 +41,7 @@ const Contact = ({ standalone = true }) => {
             <h3 style={{ fontSize: '1.35rem', color: '#FFF', letterSpacing: '0.02em' }}>Start a Project</h3>
             
             <div>
-              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', display: 'block', marginBottom: '8px', letterSpacing: '0.12em' }}>
+              <label className="card-eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
                 YOUR NAME
               </label>
               <input 
@@ -56,7 +56,7 @@ const Contact = ({ standalone = true }) => {
             </div>
 
             <div>
-              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', display: 'block', marginBottom: '8px', letterSpacing: '0.12em' }}>
+              <label className="card-eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
                 YOUR EMAIL
               </label>
               <input 
@@ -71,7 +71,7 @@ const Contact = ({ standalone = true }) => {
             </div>
 
             <div>
-              <label style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', display: 'block', marginBottom: '8px', letterSpacing: '0.12em' }}>
+              <label className="card-eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
                 PROJECT DETAILS
               </label>
               <textarea 
@@ -102,7 +102,7 @@ const Contact = ({ standalone = true }) => {
             <h3 style={{ fontSize: '1.35rem', color: '#FFF' }}>GET IN TOUCH DIRECTLY</h3>
 
             <div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '4px' }}>
+              <div className="card-eyebrow" style={{ marginBottom: '4px' }}>
                 PRIMARY EMAIL
               </div>
               <a href="mailto:hassan217175@gmail.com" style={{ color: '#FFF', textDecoration: 'none', fontSize: '1.1rem', fontWeight: 600 }}>
@@ -111,7 +111,7 @@ const Contact = ({ standalone = true }) => {
             </div>
 
             <div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '6px' }}>
+              <div className="card-eyebrow" style={{ marginBottom: '6px' }}>
                 AVAILABILITY STATUS
               </div>
               <div className="status-badge" style={{ display: 'inline-flex' }}>

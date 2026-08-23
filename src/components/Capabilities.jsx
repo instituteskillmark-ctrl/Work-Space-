@@ -44,10 +44,10 @@ const Capabilities = ({ standalone = true }) => {
                 style={{ padding: '18px 22px', display: 'flex', alignItems: 'center', gap: '14px', background: 'rgba(13, 15, 20, 0.75)' }}
                 data-cursor-text="SKILL"
               >
-                <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.85rem' }}>
+                <span className="card-eyebrow" style={{ fontSize: '0.85rem' }}>
                   0{index + 1}.
                 </span>
-                <span style={{ fontSize: '0.92rem', color: 'var(--text-secondary)' }}>{item}</span>
+                <span className="card-subheading" style={{ fontSize: '0.92rem' }}>{item}</span>
               </div>
             ))}
           </div>

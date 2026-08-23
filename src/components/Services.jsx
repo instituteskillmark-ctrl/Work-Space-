@@ -86,10 +86,10 @@ const Services = ({ standalone = true }) => {
                   data-cursor-text="SELECT"
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                    <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+                    <span className="card-eyebrow" style={{ fontSize: '0.8rem' }}>
                       {service.num}
                     </span>
-                    <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.95rem', color: isSelected ? 'var(--accent-gold)' : '#FFF' }}>
+                    <span className="card-subheading" style={{ fontSize: '0.95rem', color: isSelected ? 'var(--accent-gold)' : '#FFF' }}>
                       {service.name}
                     </span>
                   </div>
@@ -103,7 +103,7 @@ const Services = ({ standalone = true }) => {
           <div className="glossy-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.92)' }}>
             <div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', paddingTop: '4px' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--accent-gold)', letterSpacing: '0.14em', fontWeight: 600 }}>
+                <span className="card-eyebrow">
                   FEATURED OFFERING // SERVICE {currentService.num}
                 </span>
                 <span className="status-badge" style={{ margin: 0, padding: '4px 12px', fontSize: '0.65rem' }}>
@@ -119,7 +119,7 @@ const Services = ({ standalone = true }) => {
               </p>
 
               <div style={{ marginBottom: '24px' }}>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.7rem', color: 'var(--accent-gold)', letterSpacing: '0.1em', marginBottom: '12px' }}>
+                <div className="card-eyebrow" style={{ marginBottom: '12px' }}>
                   KEY DELIVERABLES:
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>

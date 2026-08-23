@@ -67,7 +67,7 @@ const About = ({ standalone = true }) => {
             }}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.12em' }}>
+              <span className="card-eyebrow">
                 CREATIVE DEVELOPER // IDENTITY
               </span>
               <span className="status-badge" style={{ margin: 0, padding: '2px 8px', fontSize: '0.6rem' }}>
@@ -114,7 +114,7 @@ const About = ({ standalone = true }) => {
             <div style={{ paddingTop: '10px', borderTop: '1px solid var(--border-specular)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
               <div>
                 <h3 style={{ fontSize: '1.1rem', color: '#FFF', letterSpacing: '0.02em', marginBottom: '2px' }}>Hassan Ahmad</h3>
-                <p style={{ color: 'var(--accent-gold)', fontFamily: 'var(--font-mono)', fontSize: '0.72rem', letterSpacing: '0.08em' }}>
+                <p className="card-eyebrow" style={{ fontSize: '0.68rem' }}>
                   AI CREATIVE DEVELOPER
                 </p>
               </div>
@@ -126,7 +126,7 @@ const About = ({ standalone = true }) => {
             {/* AI Specialization & Interactive Dynamic Tabs Block */}
             <div style={{ padding: '16px', borderRadius: '10px', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--border-specular)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.12em' }}>
+                <div className="card-eyebrow">
                   {specData[activeSpec].title}
                 </div>
                 <span className="status-badge" style={{ margin: 0, padding: '2px 6px', fontSize: '0.58rem' }}>
@@ -150,6 +150,8 @@ const About = ({ standalone = true }) => {
                       style={{
                         fontFamily: 'var(--font-mono)',
                         fontSize: '0.64rem',
+                        fontWeight: 600,
+                        letterSpacing: '0.08em',
                         padding: '4px 10px',
                         borderRadius: '5px',
                         cursor: 'pointer',
@@ -172,7 +174,7 @@ const About = ({ standalone = true }) => {
           {/* Column 2: Personal Story Bio */}
           <div className="glossy-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', letterSpacing: '0.15em', marginBottom: '16px' }}>
+              <div className="card-eyebrow" style={{ marginBottom: '16px' }}>
                 THE ORIGIN // PHILOSOPHY
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '20px', color: '#FFF' }}>
@@ -196,7 +198,7 @@ const About = ({ standalone = true }) => {
               <div className="status-badge" style={{ margin: 0, padding: '5px 12px', fontSize: '0.65rem' }}>
                 <span>📍 GUJRANWALA, PAKISTAN</span>
               </div>
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.65rem', color: 'var(--accent-gold)', letterSpacing: '0.1em' }}>
+              <span className="card-eyebrow" style={{ fontSize: '0.65rem' }}>
                 AVAILABLE FOR NEW PROJECTS
               </span>
             </div>
@@ -205,7 +207,7 @@ const About = ({ standalone = true }) => {
           {/* Column 3: Practical Skill Examples Panel */}
           <div className="glossy-card" style={{ padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', letterSpacing: '0.15em', marginBottom: '16px' }}>
+              <div className="card-eyebrow" style={{ marginBottom: '16px' }}>
                 PRACTICAL CAPABILITIES // EXAMPLES
               </div>
               <h3 style={{ fontSize: '1.25rem', marginBottom: '20px', color: '#FFF' }}>
@@ -217,7 +219,7 @@ const About = ({ standalone = true }) => {
                   <div key={idx} style={{ padding: '12px 14px', borderRadius: '8px', background: 'rgba(255, 255, 255, 0.02)', border: '1px solid var(--border-specular)' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '3px' }}>
                       <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--accent-gold)', boxShadow: '0 0 8px var(--accent-gold)' }} />
-                      <span style={{ fontSize: '0.88rem', color: '#FFF', fontWeight: 600, fontFamily: 'var(--font-display)' }}>{item.title}</span>
+                      <span className="card-subheading" style={{ fontSize: '0.88rem' }}>{item.title}</span>
                     </div>
                     <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', paddingLeft: '14px', lineHeight: '1.4' }}>
                       {item.example}

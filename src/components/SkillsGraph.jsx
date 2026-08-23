@@ -142,7 +142,7 @@ const SkillsGraph = () => {
             <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: '1.2rem', color: '#FFF', letterSpacing: '0.14em', textShadow: '0 0 15px rgba(0,0,0,0.85)' }}>
               HASSAN
             </span>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.62rem', color: 'var(--accent-gold)', letterSpacing: '0.18em', marginTop: '2px', fontWeight: 'bold' }}>
+            <span className="card-eyebrow" style={{ fontSize: '0.62rem', marginTop: '2px' }}>
               3D AI CORE
             </span>
           </div>
@@ -175,7 +175,7 @@ const SkillsGraph = () => {
               }}
               data-cursor-text="DOMAIN"
             >
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 800, fontSize: '0.85rem', color: isSelected ? 'var(--accent-gold)' : 'var(--text-primary)', letterSpacing: '0.06em' }}>
+              <div className="card-subheading" style={{ fontSize: '0.85rem', color: isSelected ? 'var(--accent-gold)' : 'var(--text-primary)' }}>
                 {node.title}
               </div>
             </div>
@@ -199,7 +199,7 @@ const SkillsGraph = () => {
         }}
       >
         <div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', letterSpacing: '0.15em', marginBottom: '4px' }}>
+          <div className="card-eyebrow" style={{ marginBottom: '4px' }}>
             SELECTED DOMAIN TECH STACK // {currentActiveNode.title}
           </div>
           <h4 style={{ fontSize: '1.2rem', color: '#FFF' }}>
