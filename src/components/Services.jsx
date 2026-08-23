@@ -100,13 +100,13 @@ const Services = ({ standalone = true }) => {
           </div>
 
           {/* Large Dynamic Active Service Feature Showcase Panel */}
-          <div className="glossy-card asymmetric-hero-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.92)' }}>
+          <div className="glossy-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.92)' }}>
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--accent-gold)', letterSpacing: '0.12em' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', paddingTop: '4px' }}>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.78rem', color: 'var(--accent-gold)', letterSpacing: '0.14em', fontWeight: 600 }}>
                   FEATURED OFFERING // SERVICE {currentService.num}
                 </span>
-                <span className="status-badge" style={{ margin: 0, padding: '4px 10px', fontSize: '0.65rem' }}>
+                <span className="status-badge" style={{ margin: 0, padding: '4px 12px', fontSize: '0.65rem' }}>
                   STUDIO SOLUTION
                 </span>
               </div>

@@ -77,7 +77,7 @@ const Projects = ({ standalone = true }) => {
           {approvedProjects.map((project, idx) => {
             const isFeatured = idx === 0;
             const isStaggered = idx === 1;
-            const cardClasses = `glossy-card ${isFeatured ? 'asymmetric-grid-hero asymmetric-hero-card' : ''} ${isStaggered ? 'stagger-offset-card' : ''}`;
+            const cardClasses = `glossy-card ${isFeatured ? 'asymmetric-grid-hero' : ''} ${isStaggered ? 'stagger-offset-card' : ''}`;
 
             return (
               <div 
@@ -134,7 +134,7 @@ const Projects = ({ standalone = true }) => {
                     </div>
                   </div>
 
-                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.12em', marginBottom: '6px' }}>
+                  <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.72rem', color: 'var(--accent-gold)', letterSpacing: '0.14em', marginBottom: '8px', paddingTop: '2px' }}>
                     {project.num}
                   </div>
                   <h3 style={{ fontSize: isFeatured ? '1.5rem' : '1.3rem', marginBottom: '8px', color: '#FFF' }}>{project.title}</h3>
