@@ -41,8 +41,6 @@ const Welcome = () => {
       <div 
         className="main-wrapper" 
         style={{ 
-          paddingLeft: '140px', 
-          paddingRight: '40px', 
           position: 'relative', 
           zIndex: 2, 
           width: '100%' 

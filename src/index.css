@@ -111,22 +111,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-wrapper {
   width: 100%;
-  max-width: 1320px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1201px) {
+  .main-wrapper {
+    padding-left: 170px;
+    padding-right: 70px;
+  }
 }
 
 /* Header & Top Bar */
 .top-header {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 500;
   width: 100%;
   padding: 12px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(7, 8, 10, 0.88);
+  background: rgba(7, 8, 10, 0.92);
   backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid var(--border-specular);
 }
@@ -217,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 36px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 90;
+  z-index: 300;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -374,7 +383,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Blocks */
 .section-wrapper {
-  padding: 110px 0;
+  padding: 90px 0 80px 0;
+  scroll-margin-top: 80px;
+  position: relative;
+  z-index: 10;
   border-bottom: 1px solid var(--border-glass);
 }
 
@@ -498,7 +510,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 36px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 90;
+  z-index: 300;
   display: flex;
   flex-direction: column;
   gap: 20px;
