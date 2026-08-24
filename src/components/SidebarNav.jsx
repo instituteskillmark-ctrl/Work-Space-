@@ -10,7 +10,8 @@ const SidebarNav = () => {
     { id: 'skills', num: '03', label: 'SKILLS', path: '/capabilities' },
     { id: 'projects', num: '04', label: 'PROJECTS', path: '/projects' },
     { id: 'services', num: '05', label: 'SERVICES', path: '/services' },
-    { id: 'contact', num: '06', label: 'CONTACT', path: '/contact' }
+    { id: 'ai-lab', num: '06', label: 'AI LAB', path: '/ai-lab' },
+    { id: 'contact', num: '07', label: 'CONTACT', path: '/contact' }
   ];
 
   return (

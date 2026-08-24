@@ -142,8 +142,8 @@ const Services = ({ standalone = true }) => {
         </div>
 
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-          <Link to="/capabilities" className="btn-primary" id="next-section-btn" data-cursor-text="CAPABILITIES">
-            Next: Capabilities →
+          <Link to="/capabilities" className="btn-primary" id="next-section-btn" data-cursor-text="SKILLS">
+            Next: Skills →
           </Link>
         </div>
       </div>

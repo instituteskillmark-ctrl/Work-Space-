@@ -60,8 +60,9 @@ function AppRoutes() {
       <Route path="/contact" element={<WorkspaceLayout><Contact standalone={true} /></WorkspaceLayout>} />
       <Route path="/all" element={<WorkspaceLayout><WorkspaceOverview /></WorkspaceLayout>} />
       
-      {/* Route alias for /workspace */}
+      {/* Route alias for /workspace and /skills */}
       <Route path="/workspace" element={<Navigate to="/about" replace />} />
+      <Route path="/skills" element={<Navigate to="/capabilities" replace />} />
 
       {/* 404 fallback route */}
       <Route path="*" element={<NotFound />} />

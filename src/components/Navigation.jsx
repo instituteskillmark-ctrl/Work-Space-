@@ -6,9 +6,9 @@ const Navigation = () => {
 
   const destinations = [
     { id: 'about', path: '/about', label: 'About' },
+    { id: 'skills', path: '/capabilities', label: 'Skills' },
     { id: 'projects', path: '/projects', label: 'Projects' },
     { id: 'services', path: '/services', label: 'Services' },
-    { id: 'capabilities', path: '/capabilities', label: 'Capabilities' },
     { id: 'ai-lab', path: '/ai-lab', label: 'AI Lab' },
     { id: 'contact', path: '/contact', label: 'Contact' }
   ];
