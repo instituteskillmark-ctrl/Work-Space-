@@ -36,7 +36,7 @@ const Capabilities = ({ standalone = true }) => {
           <h3 style={{ fontSize: '1.25rem', marginBottom: '20px', color: 'var(--text-secondary)' }}>
             Core Technical Capabilities
           </h3>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px', marginBottom: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '14px', marginBottom: '40px' }}>
             {userApprovedSkills.map((item, index) => (
               <div 
                 key={index} 

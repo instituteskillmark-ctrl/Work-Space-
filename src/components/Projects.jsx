@@ -84,7 +84,7 @@ const Projects = ({ standalone = true }) => {
         </div>
 
         {/* Case-Study Showcase Grid with Intentional Asymmetric Hierarchy */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', marginBottom: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '28px', marginBottom: '48px' }}>
           {approvedProjects.map((project, idx) => {
             const isFeatured = idx === 0;
             const isStaggered = idx === 1;
@@ -96,18 +96,18 @@ const Projects = ({ standalone = true }) => {
                 className={cardClasses}
                 id={project.id}
                 data-cursor-text="VIEW"
-                style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: isFeatured ? '36px' : '28px' }}
+                style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: isFeatured ? 'clamp(20px, 4vw, 36px)' : 'clamp(18px, 3.5vw, 28px)' }}
               >
                 <div>
                   {/* Visual Case-Study Preview Frame with Real Image Mockup */}
                   <div style={{
-                    height: isFeatured ? '260px' : '210px',
+                    height: isFeatured ? 'clamp(180px, 28vw, 260px)' : 'clamp(160px, 24vw, 210px)',
                     width: '100%',
                     borderRadius: '10px',
                     border: '1px solid var(--border-gold)',
                     position: 'relative',
                     overflow: 'hidden',
-                    marginBottom: '24px',
+                    marginBottom: '20px',
                     background: 'rgba(11, 13, 18, 0.95)',
                     display: 'flex',
                     alignItems: 'center',

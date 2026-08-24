@@ -56,7 +56,7 @@ const AILab = ({ standalone = true }) => {
         </div>
 
         {/* 3D Core & Floating Experiment Visual Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px', alignItems: 'center', marginBottom: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '28px', alignItems: 'center', marginBottom: '48px' }}>
           {/* Left Interactive Experiment Selectors */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {labExperiments.map((exp, index) => {
@@ -67,7 +67,7 @@ const AILab = ({ standalone = true }) => {
                   onClick={() => setActiveExperiment(index)}
                   className="glossy-card"
                   style={{
-                    padding: '24px',
+                    padding: '20px',
                     cursor: 'pointer',
                     borderColor: isSelected ? 'var(--accent-gold)' : 'var(--border-specular)',
                     background: isSelected ? 'rgba(229, 152, 59, 0.12)' : 'var(--bg-card)',
@@ -98,8 +98,8 @@ const AILab = ({ standalone = true }) => {
           <div 
             className="glossy-card" 
             style={{ 
-              padding: '24px', 
-              minHeight: '440px', 
+              padding: '20px', 
+              minHeight: 'auto', 
               display: 'flex', 
               flexDirection: 'column', 
               justify: 'space-between', 
@@ -123,7 +123,7 @@ const AILab = ({ standalone = true }) => {
               style={{ 
                 position: 'relative', 
                 width: '100%', 
-                height: '310px', 
+                height: 'clamp(200px, 30vw, 310px)', 
                 borderRadius: '12px', 
                 overflow: 'hidden',
                 border: '1px solid var(--border-specular)',

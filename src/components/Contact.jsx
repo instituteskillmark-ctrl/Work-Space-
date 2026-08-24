@@ -69,9 +69,9 @@ const Contact = ({ standalone = true }) => {
           <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.3)' }}>I'LL BUILD THE EXPERIENCE.</span>
         </h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', marginBottom: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '32px', marginBottom: '48px' }}>
           {/* Contact Form */}
-          <form className="glossy-card" onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '22px', padding: '36px' }}>
+          <form className="glossy-card" onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '20px', padding: 'clamp(20px, 4vw, 36px)' }}>
             <h3 style={{ fontSize: '1.35rem', color: '#FFF', letterSpacing: '0.02em' }}>Start a Project</h3>
             
             <div>
@@ -89,7 +89,7 @@ const Contact = ({ standalone = true }) => {
               />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '16px' }}>
               <div>
                 <label className="card-eyebrow" style={{ display: 'block', marginBottom: '8px' }}>
                   YOUR EMAIL

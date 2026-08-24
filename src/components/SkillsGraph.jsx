@@ -100,7 +100,7 @@ const SkillsGraph = () => {
         </div>
 
         {/* Domain Selection Tabs (All 6 Domain Cards with 3D Elevate Animation & Display Font) */}
-        <div style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '14px' }}>
+        <div style={{ marginTop: '24px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 140px), 1fr))', gap: '12px' }}>
           {skillNodes.map((node) => {
             const isSelected = activeCategory === node.id;
             return (

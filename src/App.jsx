@@ -33,7 +33,7 @@ const WorkspaceLayout = ({ children }) => {
         <Navigation />
 
         <div className="top-right-actions">
-          <Link to="/contact" className="btn-primary" style={{ padding: '8px 18px', minHeight: '38px', fontSize: '0.8rem' }} data-cursor-text="TALK">
+          <Link to="/contact" className="btn-primary header-talk-btn desktop-nav" style={{ padding: '8px 16px', minHeight: '36px', fontSize: '0.78rem' }} data-cursor-text="TALK">
             LET'S TALK
           </Link>
         </div>

@@ -33,7 +33,7 @@ const BuildWithHassan = ({ onSelectChoice }) => {
           BUILD WITH <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.25)' }}>HASSAN</span>
         </h2>
 
-        <div className="glossy-card" style={{ padding: '36px', position: 'relative' }}>
+        <div className="glossy-card" style={{ padding: 'clamp(20px, 4vw, 36px)', position: 'relative' }}>
           {/* Step Progress Indicators */}
           <div style={{ display: 'flex', gap: '12px', marginBottom: '32px' }}>
             {[1, 2, 3].map((s) => (

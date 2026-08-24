@@ -52,7 +52,7 @@ const About = ({ standalone = true }) => {
         </h2>
 
         {/* 3-Column Asymmetric Editorial Layout: Portrait + Story Bio + Practical Capabilities */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '28px', marginBottom: '48px', alignItems: 'stretch' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '24px', marginBottom: '48px', alignItems: 'stretch' }}>
           
           {/* Column 1: Custom Portrait Showcase Frame */}
           <div 
@@ -80,7 +80,7 @@ const About = ({ standalone = true }) => {
               style={{ 
                 position: 'relative', 
                 width: '100%', 
-                height: '380px', 
+                height: 'clamp(240px, 36vw, 380px)', 
                 borderRadius: '10px', 
                 overflow: 'hidden',
                 border: '1px solid var(--border-specular)',

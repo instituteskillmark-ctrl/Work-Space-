@@ -51,12 +51,20 @@ const Navigation = () => {
               to={dest.path}
               onClick={() => setMobileOpen(false)}
               className={({ isActive }) => (isActive ? 'nav-link-btn active' : 'nav-link-btn')}
-              style={{ width: '100%', justifyContent: 'space-between', padding: '12px 20px', fontSize: '0.9rem' }}
+              style={{ width: '100%', justifyContent: 'space-between', padding: '12px 18px', fontSize: '0.88rem' }}
             >
               <span>{dest.label}</span>
               <span style={{ color: 'var(--accent-gold)' }}>→</span>
             </NavLink>
           ))}
+          <NavLink
+            to="/contact"
+            onClick={() => setMobileOpen(false)}
+            className="btn-primary"
+            style={{ width: '100%', marginTop: '6px', justifyContent: 'center', fontSize: '0.85rem', padding: '12px' }}
+          >
+            LET'S TALK →
+          </NavLink>
         </div>
       )}
     </>
