@@ -41,15 +41,15 @@ const Welcome = () => {
       {/* Pure Obsidian & Amber Specular Glass Shine Hero Container */}
       <div className="main-wrapper">
         <div className="hero-glass-card">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 440px', gap: '48px', alignItems: 'center', width: '100%', position: 'relative', zIndex: 3 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '32px', alignItems: 'center', width: '100%', position: 'relative', zIndex: 3 }}>
             
             {/* Left Content Column (Headline, Subtitle, CTAs) */}
             <div style={{ maxWidth: '580px', width: '100%' }}>
               <span className="eyebrow">AI CREATIVE DEVELOPER</span>
-              <h1 style={{ fontSize: '3.25rem', marginTop: '14px', marginBottom: '20px', lineHeight: 1.1, letterSpacing: '-0.02em', fontWeight: 800 }}>
+              <h1 style={{ fontSize: 'clamp(1.75rem, 5.5vw, 3.25rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.15, letterSpacing: '-0.02em', fontWeight: 800, wordBreak: 'break-word' }}>
                 I BUILD DIGITAL EXPERIENCES THAT FEEL <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.45)' }}>ALIVE.</span>
               </h1>
-              <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', marginBottom: '36px', maxWidth: '500px', lineHeight: 1.65 }}>
+              <p style={{ fontSize: 'clamp(0.92rem, 2.5vw, 1.05rem)', color: 'var(--text-secondary)', marginBottom: '32px', maxWidth: '500px', lineHeight: 1.65 }}>
                 I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.
               </p>
 
