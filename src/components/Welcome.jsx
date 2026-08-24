@@ -41,26 +41,26 @@ const Welcome = () => {
       {/* Pure Obsidian & Amber Specular Glass Shine Hero Container */}
       <div className="main-wrapper">
         <div className="hero-glass-card">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '36px', alignItems: 'center', width: '100%', position: 'relative', zIndex: 3 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 440px', gap: '48px', alignItems: 'center', width: '100%', position: 'relative', zIndex: 3 }}>
             
             {/* Left Content Column (Headline, Subtitle, CTAs) */}
             <div style={{ maxWidth: '580px', width: '100%' }}>
               <span className="eyebrow">AI CREATIVE DEVELOPER</span>
-              <h1 style={{ fontSize: 'clamp(1.7rem, 5.2vw, 3.5rem)', marginTop: '12px', marginBottom: '18px', lineHeight: 1.12, letterSpacing: '-0.02em', fontWeight: 800, wordBreak: 'break-word' }}>
+              <h1 style={{ fontSize: '3.25rem', marginTop: '14px', marginBottom: '20px', lineHeight: 1.1, letterSpacing: '-0.02em', fontWeight: 800 }}>
                 I BUILD DIGITAL EXPERIENCES THAT FEEL <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.45)' }}>ALIVE.</span>
               </h1>
-              <p style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1.05rem)', color: 'var(--text-secondary)', marginBottom: '30px', maxWidth: '500px', lineHeight: 1.65 }}>
+              <p style={{ fontSize: '1.05rem', color: 'var(--text-secondary)', marginBottom: '36px', maxWidth: '500px', lineHeight: 1.65 }}>
                 I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.
               </p>
 
               {/* Functional Action Buttons: Primary & Secondary with 3D Shimmer Animations */}
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
+              <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
                 <Link 
                   to="/projects" 
                   className="btn-primary" 
                   id="view-work-hero-btn"
                   data-cursor-text="WORK"
-                  style={{ padding: '12px 22px', fontSize: '0.84rem' }}
+                  style={{ padding: '12px 26px', fontSize: '0.85rem' }}
                 >
                   VIEW MY WORK →
                 </Link>
@@ -69,7 +69,7 @@ const Welcome = () => {
                   className="btn-outline" 
                   id="about-me-hero-btn"
                   data-cursor-text="ABOUT"
-                  style={{ padding: '12px 20px', fontSize: '0.84rem', borderColor: 'var(--border-gold)', color: 'var(--accent-gold)' }}
+                  style={{ padding: '12px 22px', fontSize: '0.85rem', borderColor: 'var(--border-gold)', color: 'var(--accent-gold)' }}
                 >
                   ABOUT ME →
                 </Link>
@@ -82,7 +82,7 @@ const Welcome = () => {
                     e.preventDefault();
                     alert('Hassan Ahmad CV download started.');
                   }}
-                  style={{ padding: '12px 18px', fontSize: '0.84rem' }}
+                  style={{ padding: '12px 20px', fontSize: '0.85rem' }}
                 >
                   DOWNLOAD CV ⤓
                 </a>
@@ -97,7 +97,7 @@ const Welcome = () => {
                   position: 'relative',
                   width: '100%',
                   maxWidth: '440px',
-                  height: 'clamp(250px, 35vw, 380px)',
+                  height: '380px',
                   borderRadius: '16px',
                   overflow: 'hidden',
                   border: '1px solid var(--border-gold)',
@@ -170,7 +170,7 @@ const Welcome = () => {
         <div 
           style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 130px), 1fr))', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', 
             gap: '14px' 
           }}
         >

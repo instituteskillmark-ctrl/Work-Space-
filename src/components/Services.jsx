@@ -58,9 +58,9 @@ const Services = ({ standalone = true }) => {
         </h2>
 
         {/* Interactive Service Selector */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '28px', marginBottom: '48px', alignItems: 'stretch' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '36px', marginBottom: '48px', alignItems: 'stretch' }}>
           {/* Vertical Interactive Service Index */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {servicesData.map((service, index) => {
               const isSelected = selectedService === index;
               return (
@@ -70,7 +70,7 @@ const Services = ({ standalone = true }) => {
                   onMouseEnter={() => setSelectedService(index)}
                   className="glossy-card"
                   style={{
-                    padding: '18px 20px',
+                    padding: '22px 26px',
                     cursor: 'pointer',
                     borderRadius: '12px',
                     borderLeft: isSelected ? '4px solid var(--accent-gold)' : '1px solid var(--border-specular)',
@@ -85,11 +85,11 @@ const Services = ({ standalone = true }) => {
                   }}
                   data-cursor-text="SELECT"
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                     <span className="card-eyebrow" style={{ fontSize: '0.8rem' }}>
                       {service.num}
                     </span>
-                    <span className="card-subheading" style={{ fontSize: '0.92rem', color: isSelected ? 'var(--accent-gold)' : '#FFF' }}>
+                    <span className="card-subheading" style={{ fontSize: '0.95rem', color: isSelected ? 'var(--accent-gold)' : '#FFF' }}>
                       {service.name}
                     </span>
                   </div>
@@ -100,9 +100,9 @@ const Services = ({ standalone = true }) => {
           </div>
 
           {/* Large Dynamic Active Service Feature Showcase Panel */}
-          <div className="glossy-card" style={{ padding: 'clamp(20px, 4vw, 36px)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.92)' }}>
+          <div className="glossy-card" style={{ padding: '36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderColor: 'var(--border-gold)', background: 'rgba(15, 18, 25, 0.92)' }}>
             <div>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', paddingTop: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', paddingTop: '4px' }}>
                 <span className="card-eyebrow">
                   FEATURED OFFERING // SERVICE {currentService.num}
                 </span>
@@ -111,10 +111,10 @@ const Services = ({ standalone = true }) => {
                 </span>
               </div>
 
-              <h3 style={{ fontSize: '1.45rem', color: '#FFF', marginBottom: '14px' }}>
+              <h3 style={{ fontSize: '1.6rem', color: '#FFF', marginBottom: '16px' }}>
                 {currentService.name}
               </h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.98rem', lineHeight: '1.65', marginBottom: '24px' }}>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '28px' }}>
                 {currentService.fullDesc}
               </p>
 
@@ -122,7 +122,7 @@ const Services = ({ standalone = true }) => {
                 <div className="card-eyebrow" style={{ marginBottom: '12px' }}>
                   KEY DELIVERABLES:
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 180px), 1fr))', gap: '10px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '10px' }}>
                   {currentService.deliverables.map((del, i) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: 'var(--text-muted)' }}>
                       <span style={{ color: 'var(--accent-gold)' }}>✓</span>
