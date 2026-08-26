@@ -1,28 +1,28 @@
-/* HASSAN AHMAD — V2 ENVIRONMENTAL AMBER LIGHTING DESIGN SYSTEM */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+/* HASSAN AHMAD — REFINED EDITORIAL DESIGN SYSTEM */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* Environmental Palette - Obsidian, Smoked Glass & Amber Volumetric Glow */
-  --bg-base: #07080a;
-  --bg-surface: #0b0d12;
-  --bg-card: rgba(11, 13, 18, 0.82);
-  --bg-glass: rgba(15, 18, 25, 0.7);
+  /* Environmental Palette - Obsidian, Smoked Glass & Muted Soft Gold Volumetric Glow */
+  --bg-base: #090a0d;
+  --bg-surface: #0e1017;
+  --bg-card: rgba(14, 16, 23, 0.85);
+  --bg-glass: rgba(18, 20, 29, 0.7);
   
-  --accent-gold: #e5983b;
-  --accent-gold-bright: #f59e0b;
-  --accent-gold-glow: rgba(229, 152, 59, 0.4);
-  --accent-gold-subtle: rgba(229, 152, 59, 0.08);
+  --accent-gold: #d4a373;
+  --accent-gold-bright: #e2b07e;
+  --accent-gold-glow: rgba(212, 163, 115, 0.25);
+  --accent-gold-subtle: rgba(212, 163, 115, 0.08);
   
-  --text-primary: #ffffff;
-  --text-secondary: #d8deeb;
-  --text-muted: #838b9e;
-  --text-dim: #4d5366;
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #828ca0;
+  --text-dim: #475569;
   
-  --border-specular: rgba(255, 255, 255, 0.09);
-  --border-gold: rgba(229, 152, 59, 0.35);
+  --border-specular: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(212, 163, 115, 0.28);
   --border-glass: rgba(255, 255, 255, 0.04);
 
-  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
@@ -44,10 +44,10 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background: 
-    radial-gradient(circle at 50% -10%, rgba(229, 152, 59, 0.12) 0%, rgba(7, 8, 10, 1) 75%),
-    radial-gradient(circle at 85% 60%, rgba(229, 152, 59, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 50% -10%, rgba(212, 163, 115, 0.1) 0%, rgba(9, 10, 13, 1) 75%),
+    radial-gradient(circle at 85% 60%, rgba(212, 163, 115, 0.04) 0%, transparent 50%);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.65;
   font-size: 16px;
   max-width: 100%;
 }
@@ -71,9 +71,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.12;
+  line-height: 1.22;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  text-transform: none;
 }
 
 .text-gold {
@@ -316,144 +317,84 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   HYPER 3D BUTTON & TACTILE ANIMATION SYSTEM
+/* ==========================================================================
+   REFINED BUTTON & ACTION INTERACTION SYSTEM
    ========================================================================== */
 
-/* Shimmer Light Sweep Animation Keyframe */
-@keyframes buttonSpecularShimmer {
-  0% {
-    transform: rotate(25deg) translateX(-150%);
-  }
-  20%, 100% {
-    transform: rotate(25deg) translateX(350%);
-  }
-}
-
-@keyframes buttonPulseGlow {
-  0%, 100% {
-    box-shadow: 0 10px 30px rgba(229, 152, 59, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -2px 0 rgba(0, 0, 0, 0.3);
-  }
-  50% {
-    box-shadow: 0 14px 45px rgba(245, 158, 11, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.7), inset 0 -2px 0 rgba(0, 0, 0, 0.4), 0 0 20px rgba(245, 158, 11, 0.4);
-  }
-}
-
-/* Primary 3D Gold Obsidian Action Button */
+/* Primary Refined Solid Button */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 30px;
-  min-height: 48px;
-  border-radius: 10px;
-  border: 1px solid #f59e0b;
-  background: linear-gradient(135deg, #f59e0b 0%, #e5983b 50%, #b45309 100%);
-  color: #07080a;
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.88rem;
-  letter-spacing: 0.08em;
+  gap: 8px;
+  padding: 12px 26px;
+  min-height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-gold);
+  background: var(--accent-gold);
+  color: #090a0d;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(229, 152, 59, 0.45), inset 0 1.5px 1px rgba(255, 255, 255, 0.6), inset 0 -2.5px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 18px var(--accent-gold-glow);
   position: relative;
   overflow: hidden;
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  transform-style: preserve-3d;
-  animation: buttonPulseGlow 4s infinite ease-in-out;
-}
-
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 45%;
-  height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
-  transform: rotate(25deg);
-  pointer-events: none;
-  animation: buttonSpecularShimmer 5s infinite cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-primary:hover::before {
-  animation: none;
-  transform: rotate(25deg) translateX(360%);
-  transition: transform 0.6s ease;
+  transition: all 250ms ease;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
-  border-color: #ffffff;
-  box-shadow: 0 18px 50px rgba(229, 152, 59, 0.75), 0 0 30px rgba(245, 158, 11, 0.6), inset 0 2px 2px rgba(255, 255, 255, 0.8);
-  transform: perspective(600px) rotateX(6deg) rotateY(-4deg) translateZ(14px) translateY(-5px);
+  background: var(--accent-gold-bright);
+  border-color: var(--accent-gold-bright);
+  color: #090a0d;
+  box-shadow: 0 8px 25px rgba(212, 163, 115, 0.4);
+  transform: translateY(-2px);
 }
 
 .btn-primary:active {
-  transform: perspective(600px) translateZ(2px) translateY(2px);
-  box-shadow: 0 4px 15px rgba(229, 152, 59, 0.5), inset 0 3px 6px rgba(0, 0, 0, 0.5);
+  transform: translateY(0);
+  box-shadow: 0 2px 10px var(--accent-gold-glow);
 }
 
-/* Secondary 3D Smoked Glass Action Button */
+/* Secondary Refined Ghost / Outline Button */
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 14px 30px;
-  min-height: 48px;
-  border-radius: 10px;
+  gap: 8px;
+  padding: 12px 24px;
+  min-height: 44px;
+  border-radius: 8px;
   border: 1px solid var(--border-gold);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(15, 18, 25, 0.88) 100%);
+  background: transparent;
   color: var(--text-primary);
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.88rem;
-  letter-spacing: 0.08em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  transform-style: preserve-3d;
-}
-
-.btn-outline::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -60%;
-  width: 45%;
-  height: 200%;
-  background: linear-gradient(90deg, transparent, rgba(229, 152, 59, 0.45), transparent);
-  transform: rotate(25deg);
-  pointer-events: none;
-  animation: buttonSpecularShimmer 5s infinite 2.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-outline:hover::before {
-  animation: none;
-  transform: rotate(25deg) translateX(360%);
-  transition: transform 0.6s ease;
+  transition: all 250ms ease;
 }
 
 .btn-outline:hover {
   border-color: var(--accent-gold);
   color: var(--accent-gold);
-  background: linear-gradient(135deg, rgba(229, 152, 59, 0.2) 0%, rgba(15, 18, 25, 0.95) 100%);
-  box-shadow: 0 15px 40px rgba(229, 152, 59, 0.4), inset 0 1px 0 rgba(229, 152, 59, 0.4);
-  transform: perspective(600px) rotateX(-5deg) rotateY(4deg) translateZ(12px) translateY(-5px);
-  text-shadow: 0 0 15px rgba(245, 158, 11, 0.8);
+  background: var(--accent-gold-subtle);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 163, 115, 0.15);
 }
 
 .btn-outline:active {
-  transform: perspective(600px) translateZ(2px) translateY(2px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Hero Floating 3D Frame & Glow Pulse Animations */

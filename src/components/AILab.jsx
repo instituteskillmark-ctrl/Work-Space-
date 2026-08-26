@@ -46,7 +46,7 @@ const AILab = ({ standalone = true }) => {
           <div>
             <span className="eyebrow">DIGITAL CREATIVE LAB // EXPERIMENTS</span>
             <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)' }}>
-              DIGITAL LAB & <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.25)' }}>EXPERIMENTS</span>
+              Digital Lab & <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 25px var(--accent-gold-glow)' }}>Experiments</span>
             </h2>
           </div>
           <div className="status-badge">

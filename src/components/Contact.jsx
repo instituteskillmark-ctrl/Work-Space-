@@ -64,9 +64,9 @@ const Contact = ({ standalone = true }) => {
       )}
       <div className="main-wrapper">
         <span className="eyebrow">06 CONTACT // LET'S WORK TOGETHER</span>
-        <h2 className="section-title" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '40px', maxWidth: '850px', lineHeight: 1.1 }}>
-          YOU HAVE THE IDEA. <br />
-          <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.3)' }}>I'LL BUILD THE EXPERIENCE.</span>
+        <h2 className="section-title" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '40px', maxWidth: '850px', lineHeight: 1.2 }}>
+          You have the idea. <br />
+          <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 30px var(--accent-gold-glow)' }}>I'll build the experience.</span>
         </h2>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', marginBottom: '48px' }}>

@@ -46,21 +46,20 @@ const Welcome = () => {
             {/* Left Content Column (Headline, Subtitle, CTAs) */}
             <div style={{ maxWidth: '580px', width: '100%' }}>
               <span className="eyebrow">AI CREATIVE DEVELOPER</span>
-              <h1 style={{ fontSize: 'clamp(1.75rem, 5.5vw, 3.25rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.15, letterSpacing: '-0.02em', fontWeight: 800, wordBreak: 'break-word' }}>
-                I BUILD DIGITAL EXPERIENCES THAT FEEL <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.45)' }}>ALIVE.</span>
+              <h1 style={{ fontSize: 'clamp(2rem, 5.5vw, 3.5rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.2, letterSpacing: '-0.03em', fontWeight: 700, wordBreak: 'break-word' }}>
+                I build digital experiences that feel <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 30px var(--accent-gold-glow)' }}>alive.</span>
               </h1>
-              <p style={{ fontSize: 'clamp(0.92rem, 2.5vw, 1.05rem)', color: 'var(--text-secondary)', marginBottom: '32px', maxWidth: '500px', lineHeight: 1.65 }}>
+              <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', color: 'var(--text-secondary)', marginBottom: '32px', maxWidth: '500px', lineHeight: 1.65 }}>
                 I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.
               </p>
 
-              {/* Functional Action Buttons: Primary & Secondary with 3D Shimmer Animations */}
+              {/* Functional Action Buttons: Primary & Secondary */}
               <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', alignItems: 'center' }}>
                 <Link 
                   to="/projects" 
                   className="btn-primary" 
                   id="view-work-hero-btn"
                   data-cursor-text="WORK"
-                  style={{ padding: '12px 26px', fontSize: '0.85rem' }}
                 >
                   VIEW MY WORK →
                 </Link>
@@ -69,7 +68,6 @@ const Welcome = () => {
                   className="btn-outline" 
                   id="about-me-hero-btn"
                   data-cursor-text="ABOUT"
-                  style={{ padding: '12px 22px', fontSize: '0.85rem', borderColor: 'var(--border-gold)', color: 'var(--accent-gold)' }}
                 >
                   ABOUT ME →
                 </Link>
@@ -79,7 +77,6 @@ const Welcome = () => {
                   className="btn-outline" 
                   id="download-cv-btn"
                   data-cursor-text="CV"
-                  style={{ padding: '12px 20px', fontSize: '0.85rem' }}
                 >
                   DOWNLOAD CV ⤓
                 </a>

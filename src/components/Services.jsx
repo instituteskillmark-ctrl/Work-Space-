@@ -54,7 +54,7 @@ const Services = ({ standalone = true }) => {
         <div className="section-divider-diagonal" style={{ marginTop: '0', marginBottom: '40px' }} />
         <span className="eyebrow">05 SERVICES // WHAT I DO</span>
         <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '40px' }}>
-          HOW I CAN HELP <span className="text-gold" style={{ textShadow: '0 0 25px rgba(229, 152, 59, 0.3)' }}>BUILD YOUR PRODUCT</span>
+          How I Can Help <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 25px var(--accent-gold-glow)' }}>Build Your Product</span>
         </h2>
 
         {/* Interactive Service Selector */}

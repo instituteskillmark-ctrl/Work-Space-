@@ -48,7 +48,7 @@ const About = ({ standalone = true }) => {
       <div className="main-wrapper">
         <span className="eyebrow">02 ABOUT // DIGITAL IDENTITY</span>
         <h2 className="section-title" style={{ fontSize: 'clamp(2.25rem, 4.5vw, 3.5rem)', marginBottom: '40px', maxWidth: '900px' }}>
-          THE STORY BEHIND THE <span className="text-gold" style={{ textShadow: '0 0 30px rgba(229, 152, 59, 0.3)' }}>CRAFT</span>
+          The Story Behind the <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 30px var(--accent-gold-glow)' }}>Craft</span>
         </h2>
 
         {/* 3-Column Asymmetric Editorial Layout: Portrait + Story Bio + Practical Capabilities */}
