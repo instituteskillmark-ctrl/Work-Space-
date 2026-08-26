@@ -118,7 +118,7 @@ const Projects = ({ standalone = true }) => {
                     position: 'relative',
                     overflow: 'hidden',
                     marginBottom: '24px',
-                    background: 'rgba(11, 13, 18, 0.95)',
+                    background: 'radial-gradient(circle at 50% 40%, rgba(229, 152, 59, 0.15) 0%, rgba(11, 13, 18, 0.98) 85%)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -126,14 +126,18 @@ const Projects = ({ standalone = true }) => {
                   }}>
                     <img 
                       src={project.img} 
-                      alt={`${project.title} — Real Web Application Preview`}
+                      alt={`${project.title} Preview`}
+                      onError={(e) => {
+                        e.target.style.opacity = '0';
+                      }}
                       style={{
                         width: '100%',
                         height: '100%',
-                        objectFit: 'contain',
-                        objectPosition: 'center',
+                        objectFit: 'cover',
+                        objectPosition: 'top center',
                         display: 'block',
-                        filter: 'brightness(0.95) contrast(1.08)'
+                        filter: 'brightness(0.95) contrast(1.08)',
+                        transition: 'opacity 0.3s ease'
                       }}
                     />
 
