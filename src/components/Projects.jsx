@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
-import projectAipilotImg from '../assets/project-aipilot.png';
+import projectPromptwriterImg from '../assets/project-promptwriter.png';
 import projectHotelImg from '../assets/project-hotel.png';
 import projectAitoolImg from '../assets/project-aitool.png';
 import projectMedicalImg from '../assets/project-medical.png';
@@ -12,13 +12,15 @@ const Projects = ({ standalone = true }) => {
   const approvedProjects = [
     {
       id: 'project-01',
-      num: '01 // FLAGSHIP AI CAREER PLATFORM',
-      title: 'AI Resume Pilot',
-      category: 'AI Resume Analyzer & ATS Intelligence Engine',
-      description: 'An AI-powered career agent platform engineered to analyze CVs and resumes in real time. It calculates ATS match scores, identifies missing keyword benchmarks, provides structural feedback, and generates tailored interview prep recommendations.',
-      liveUrl: 'https://ai-pilot-pink.vercel.app',
-      img: projectAipilotImg,
-      badge: 'FLAGSHIP AI TOOL'
+      num: '01 // FLAGSHIP PROMPT GENERATOR',
+      title: 'Prompt Writer',
+      category: 'AI Prompt Generator & System Architecture Engine',
+      description: 'An advanced AI prompt engineering platform built to craft, refine, test, and optimize custom system prompts and LLM instructions with real-time token optimization and structured outputs.',
+      liveUrl: 'https://prompt-writer-lac.vercel.app',
+      img: projectPromptwriterImg,
+      badge: 'FLAGSHIP AI TOOL',
+      specializations: ['Prompt Engineering', 'System Prompt Crafting', 'LLM Output Structuring', 'Real-time Prompt Optimization'],
+      languages: ['JavaScript (ES6+)', 'React 19', 'Tailwind CSS', 'OpenAI API', 'HTML5 / CSS3']
     },
     {
       id: 'project-02',
@@ -28,7 +30,9 @@ const Projects = ({ standalone = true }) => {
       description: 'Built to eliminate booking drop-offs caused by slow form reloads. I used client-side reactive state caching for room availability so guests can filter dates and inspect prices instantly.',
       liveUrl: 'https://my-hotel23.vercel.app',
       img: projectHotelImg,
-      badge: 'LUXURY HOSPITALITY'
+      badge: 'LUXURY HOSPITALITY',
+      specializations: ['Client-Side State Caching', 'Interactive Date Filtering', 'Booking UX Optimization', 'Responsive Luxury Layout'],
+      languages: ['JavaScript (ES6+)', 'React', 'CSS3 / Modules', 'Vite', 'HTML5']
     },
     {
       id: 'project-03',
@@ -38,7 +42,9 @@ const Projects = ({ standalone = true }) => {
       description: 'Tackled user drop-off caused by API latency by engineering a real-time token streaming interface paired with a canvas telemetry status bar.',
       liveUrl: 'https://ai-tool-woad-rho.vercel.app',
       img: projectAitoolImg,
-      badge: 'AI SAAS INTERFACE'
+      badge: 'AI SAAS INTERFACE',
+      specializations: ['Real-Time Token Streaming', 'Canvas Telemetry Overlay', 'API Latency Reduction', 'Interactive Generation UI'],
+      languages: ['JavaScript (ES6+)', 'React', 'Node.js', 'WebSockets / SSE', 'CSS3']
     },
     {
       id: 'project-04',
@@ -48,7 +54,9 @@ const Projects = ({ standalone = true }) => {
       description: 'Replaced confusing nested menus with a streamlined 3-step appointment triage wizard so patients locate specialist care quickly.',
       liveUrl: 'https://medical-web-568k.vercel.app',
       img: projectMedicalImg,
-      badge: 'MEDICAL PLATFORM'
+      badge: 'MEDICAL PLATFORM',
+      specializations: ['Patient Triage Wizard', 'Multi-step Form Flow', 'Specialist Search Engine', 'Accessible Healthcare UX'],
+      languages: ['JavaScript (ES6+)', 'React', 'HTML5', 'Modern CSS', 'Vite']
     },
     {
       id: 'project-05',
@@ -58,7 +66,9 @@ const Projects = ({ standalone = true }) => {
       description: 'Designed an interactive case-study showcase to prove agency capabilities through live browser demonstrations rather than static screenshots.',
       liveUrl: 'https://ai-agency-website-tau.vercel.app',
       img: projectAgencyImg,
-      badge: 'AGENCY SHOWCASE'
+      badge: 'AGENCY SHOWCASE',
+      specializations: ['Interactive Showcase Grid', 'Dynamic Case Study Views', 'High-Performance Animations', 'Brand Aesthetics'],
+      languages: ['JavaScript (ES6+)', 'React', 'WebGL / Canvas', 'CSS Animations', 'Vite']
     }
   ];
 
@@ -67,7 +77,7 @@ const Projects = ({ standalone = true }) => {
       {standalone && (
         <PageMeta 
           title="Featured Projects — Hassan Ahmad | AI Creative Developer"
-          description="Explore projects built by Hassan Ahmad including Hotel Website, AI Tool, Medical Website, and AI Agency Website."
+          description="Explore projects built by Hassan Ahmad including Prompt Writer, Hotel Website, AI Tool, Medical Website, and AI Agency Website."
         />
       )}
       <div className="main-wrapper">
@@ -149,9 +159,37 @@ const Projects = ({ standalone = true }) => {
                     {project.num}
                   </div>
                   <h3 style={{ fontSize: isFeatured ? '1.5rem' : '1.3rem', marginBottom: '8px', color: '#FFF' }}>{project.title}</h3>
-                  <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6', marginBottom: '24px' }}>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', lineHeight: '1.6', marginBottom: '20px' }}>
                     {project.description}
                   </p>
+
+                  {/* Specializations & Key Features */}
+                  <div style={{ marginBottom: '16px' }}>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase', fontWeight: 600 }}>
+                      ⚡ SPECIALIZATIONS:
+                    </div>
+                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                      {project.specializations.map((spec, sIdx) => (
+                        <span key={sIdx} style={{ fontFamily: 'var(--font-sans)', fontSize: '0.72rem', padding: '3px 9px', borderRadius: '4px', background: 'rgba(229, 152, 59, 0.1)', border: '1px solid rgba(229, 152, 59, 0.25)', color: 'var(--text-primary)' }}>
+                          {spec}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Languages & Tech Stack */}
+                  <div style={{ marginBottom: '24px' }}>
+                    <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', color: 'var(--accent-gold)', letterSpacing: '0.08em', marginBottom: '8px', textTransform: 'uppercase', fontWeight: 600 }}>
+                      🛠️ LANGUAGES & TECH:
+                    </div>
+                    <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+                      {project.languages.map((lang, lIdx) => (
+                        <span key={lIdx} style={{ fontFamily: 'var(--font-mono)', fontSize: '0.68rem', padding: '3px 8px', borderRadius: '4px', background: 'rgba(255, 255, 255, 0.04)', border: '1px solid var(--border-specular)', color: 'var(--accent-gold)' }}>
+                          #{lang}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
                 <div style={{ paddingTop: '16px', borderTop: '1px solid var(--border-specular)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
