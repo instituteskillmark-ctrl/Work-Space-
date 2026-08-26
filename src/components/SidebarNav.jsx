@@ -5,12 +5,13 @@ const SidebarNav = () => {
   const location = useLocation();
 
   const indexItems = [
-    { id: 'about', num: '01', label: 'ABOUT', path: '/' },
-    { id: 'skills', num: '02', label: 'SKILLS', path: '/capabilities' },
-    { id: 'projects', num: '03', label: 'PROJECTS', path: '/projects' },
-    { id: 'services', num: '04', label: 'SERVICES', path: '/services' },
-    { id: 'ai-lab', num: '05', label: 'AI LAB', path: '/ai-lab' },
-    { id: 'contact', num: '06', label: 'CONTACT', path: '/contact' }
+    { id: 'home', num: '01', label: 'HOME', path: '/' },
+    { id: 'about', num: '02', label: 'ABOUT', path: '/about' },
+    { id: 'skills', num: '03', label: 'SKILLS', path: '/capabilities' },
+    { id: 'projects', num: '04', label: 'PROJECTS', path: '/projects' },
+    { id: 'services', num: '05', label: 'SERVICES', path: '/services' },
+    { id: 'ai-lab', num: '06', label: 'AI LAB', path: '/ai-lab' },
+    { id: 'contact', num: '07', label: 'CONTACT', path: '/contact' }
   ];
 
   return (
