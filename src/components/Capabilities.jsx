@@ -25,7 +25,7 @@ const Capabilities = ({ standalone = true }) => {
       <div className="main-wrapper">
         <span className="eyebrow">03 SKILLS // TECHNOLOGIES</span>
         <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)', marginBottom: '16px' }}>
-          The Technologies <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 25px var(--accent-gold-glow)' }}>I Work With</span>
+          The Technologies <span className="text-gold">I Work With</span>
         </h2>
 
         {/* Interactive Constellation Graph */}

@@ -46,8 +46,8 @@ const Welcome = () => {
             {/* Left Content Column (Headline, Subtitle, CTAs) */}
             <div style={{ maxWidth: '580px', width: '100%' }}>
               <span className="eyebrow">AI CREATIVE DEVELOPER</span>
-              <h1 style={{ fontSize: 'clamp(2rem, 5.5vw, 3.5rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.2, letterSpacing: '-0.03em', fontWeight: 700, wordBreak: 'break-word' }}>
-                I build digital experiences that feel <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 30px var(--accent-gold-glow)' }}>alive.</span>
+              <h1 style={{ fontSize: 'clamp(2rem, 5.5vw, 3.5rem)', marginTop: '14px', marginBottom: '20px', lineHeight: 1.25, letterSpacing: '-0.02em', fontWeight: 800, wordBreak: 'break-word' }}>
+                I build digital experiences that feel <span className="text-gold">alive.</span>
               </h1>
               <p style={{ fontSize: 'clamp(0.95rem, 2.5vw, 1.1rem)', color: 'var(--text-secondary)', marginBottom: '32px', maxWidth: '500px', lineHeight: 1.65 }}>
                 I turn complex ideas into clean web apps and smart AI tools—building stuff people actually like using.

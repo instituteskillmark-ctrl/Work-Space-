@@ -66,7 +66,7 @@ const Contact = ({ standalone = true }) => {
         <span className="eyebrow">06 CONTACT // LET'S WORK TOGETHER</span>
         <h2 className="section-title" style={{ fontSize: 'clamp(2.25rem, 5vw, 4rem)', marginBottom: '40px', maxWidth: '850px', lineHeight: 1.2 }}>
           You have the idea. <br />
-          <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 30px var(--accent-gold-glow)' }}>I'll build the experience.</span>
+          <span className="text-gold">I'll build the experience.</span>
         </h2>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', marginBottom: '48px' }}>

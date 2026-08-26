@@ -85,7 +85,7 @@ const Projects = ({ standalone = true }) => {
           <div>
             <span className="eyebrow">04 PROJECTS // CASE STUDIES</span>
             <h2 className="section-title" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)' }}>
-              Visual Project <span className="text-gold" style={{ fontStyle: 'italic', textShadow: '0 0 25px var(--accent-gold-glow)' }}>Showcase</span>
+              Visual Project <span className="text-gold">Showcase</span>
             </h2>
           </div>
           <Link to="/services" className="btn-outline" style={{ fontSize: '0.8rem', padding: '8px 16px' }} data-cursor-text="SERVICES">
