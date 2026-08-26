@@ -241,11 +241,21 @@ const About = ({ standalone = true }) => {
 
         {/* Action CTAs */}
         <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <a 
+            href="/Hassan_Ahmad_Resume.pdf" 
+            download="Hassan_Ahmad_Resume.pdf" 
+            className="btn-primary" 
+            id="download-cv-btn" 
+            data-cursor-text="CV"
+            style={{ padding: '12px 26px', fontSize: '0.85rem' }}
+          >
+            DOWNLOAD CV ⤓
+          </a>
+          <Link to="/projects" className="btn-outline" id="next-section-btn" data-cursor-text="WORK">
+            Next: Projects →
+          </Link>
           <Link to="/all" className="btn-outline" id="view-full-workspace-btn" data-cursor-text="ALL">
             View Full Workspace
-          </Link>
-          <Link to="/projects" className="btn-primary" id="next-section-btn" data-cursor-text="WORK">
-            Next: Projects →
           </Link>
         </div>
       </div>

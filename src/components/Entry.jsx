@@ -11,8 +11,8 @@ const Entry = () => {
         description="Entry page for Hassan Ahmad, AI Creative Developer."
       />
       <div className="main-wrapper">
-        <Link to="/" className="btn-outline" style={{ minHeight: '36px', padding: '6px 14px', marginBottom: '24px', fontSize: '0.8rem' }} id="back-to-welcome-btn">
-          ← Back to Welcome
+        <Link to="/" className="btn-outline" style={{ minHeight: '36px', padding: '6px 14px', marginBottom: '24px', fontSize: '0.8rem' }} id="back-to-home-btn">
+          ← Back to Home
         </Link>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'center' }}>
           <div>

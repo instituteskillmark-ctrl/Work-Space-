@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
-import Welcome from './components/Welcome';
 import Entry from './components/Entry';
 import Navigation from './components/Navigation';
 import About from './components/About';
@@ -32,7 +31,17 @@ const WorkspaceLayout = ({ children }) => {
 
         <Navigation />
 
-        <div className="top-right-actions">
+        <div className="top-right-actions" style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+          <a 
+            href="/Hassan_Ahmad_Resume.pdf" 
+            download="Hassan_Ahmad_Resume.pdf" 
+            className="btn-outline desktop-nav" 
+            style={{ padding: '8px 16px', minHeight: '36px', fontSize: '0.78rem', borderColor: 'var(--border-gold)', color: 'var(--accent-gold)' }} 
+            data-cursor-text="CV"
+            id="header-download-cv-btn"
+          >
+            DOWNLOAD CV ⤓
+          </a>
           <Link to="/contact" className="btn-primary header-talk-btn desktop-nav" style={{ padding: '8px 16px', minHeight: '36px', fontSize: '0.78rem' }} data-cursor-text="TALK">
             LET'S TALK
           </Link>
@@ -48,7 +57,7 @@ const WorkspaceLayout = ({ children }) => {
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<WorkspaceLayout><Welcome /></WorkspaceLayout>} />
+      <Route path="/" element={<WorkspaceLayout><About standalone={true} /></WorkspaceLayout>} />
       <Route path="/entry" element={<WorkspaceLayout><Entry /></WorkspaceLayout>} />
 
       {/* Workspace routes with shared header/nav layout */}
