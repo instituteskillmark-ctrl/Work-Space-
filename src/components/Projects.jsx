@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageMeta from './PageMeta';
 import projectPromptwriterImg from '../assets/project-promptwriter.png';
+import projectNovaImg from '../assets/project-nova.png';
 import projectHotelImg from '../assets/project-hotel.png';
 import projectAitoolImg from '../assets/project-aitool.png';
 import projectMedicalImg from '../assets/project-medical.png';
@@ -24,7 +25,19 @@ const Projects = ({ standalone = true }) => {
     },
     {
       id: 'project-02',
-      num: '02 // HOSPITALITY & HOTEL EXPERIENCE',
+      num: '02 // LUXURY REAL ESTATE & ARCHITECTURE',
+      title: 'Nova Residences',
+      category: 'Luxury Architecture & Residential Experience',
+      description: 'A high-end luxury real estate platform showcasing architectural design, featuring fluid Lenis smooth scrolling, GSAP interactive motion, and custom responsive residence exploration.',
+      liveUrl: 'https://nova-residenses.vercel.app',
+      img: projectNovaImg,
+      badge: 'LUXURY RESIDENTIAL',
+      specializations: ['GSAP Smooth Animations', 'Architectural Web Design', 'Lenis Scroll Physics', 'High-End Property Showcase'],
+      languages: ['Next.js 14', 'React 18', 'Tailwind CSS', 'GSAP', 'Lenis']
+    },
+    {
+      id: 'project-03',
+      num: '03 // HOSPITALITY & HOTEL EXPERIENCE',
       title: 'Hotel Website',
       category: 'Luxury Hotel & Booking Web Application',
       description: 'Built to eliminate booking drop-offs caused by slow form reloads. I used client-side reactive state caching for room availability so guests can filter dates and inspect prices instantly.',
@@ -35,8 +48,8 @@ const Projects = ({ standalone = true }) => {
       languages: ['JavaScript (ES6+)', 'React', 'CSS3 / Modules', 'Vite', 'HTML5']
     },
     {
-      id: 'project-03',
-      num: '03 // ARTIFICIAL INTELLIGENCE TOOL',
+      id: 'project-04',
+      num: '04 // ARTIFICIAL INTELLIGENCE TOOL',
       title: 'AI Tool',
       category: 'AI Application & Generation Platform',
       description: 'Tackled user drop-off caused by API latency by engineering a real-time token streaming interface paired with a canvas telemetry status bar.',
@@ -47,8 +60,8 @@ const Projects = ({ standalone = true }) => {
       languages: ['JavaScript (ES6+)', 'React', 'Node.js', 'WebSockets / SSE', 'CSS3']
     },
     {
-      id: 'project-04',
-      num: '04 // HEALTHCARE PLATFORM',
+      id: 'project-05',
+      num: '05 // HEALTHCARE PLATFORM',
       title: 'Medical Website',
       category: 'Healthcare & Patient Management Platform',
       description: 'Replaced confusing nested menus with a streamlined 3-step appointment triage wizard so patients locate specialist care quickly.',
@@ -59,8 +72,8 @@ const Projects = ({ standalone = true }) => {
       languages: ['JavaScript (ES6+)', 'React', 'HTML5', 'Modern CSS', 'Vite']
     },
     {
-      id: 'project-05',
-      num: '05 // CREATIVE AGENCY STUDIO',
+      id: 'project-06',
+      num: '06 // CREATIVE AGENCY STUDIO',
       title: 'AI Agency Website',
       category: 'Agency Studio & Digital Experience',
       description: 'Designed an interactive case-study showcase to prove agency capabilities through live browser demonstrations rather than static screenshots.',
@@ -77,7 +90,7 @@ const Projects = ({ standalone = true }) => {
       {standalone && (
         <PageMeta 
           title="Featured Projects — Hassan Ahmad | AI Creative Developer"
-          description="Explore projects built by Hassan Ahmad including Prompt Writer, Hotel Website, AI Tool, Medical Website, and AI Agency Website."
+          description="Explore projects built by Hassan Ahmad including Prompt Writer, Nova Residences, Hotel Website, AI Tool, Medical Website, and AI Agency Website."
         />
       )}
       <div className="main-wrapper">
